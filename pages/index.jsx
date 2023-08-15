@@ -1,13 +1,16 @@
-// import Image from 'next/image'
-// import styles from '../styles/index.module.css';
 import Navbar from '../components/navbar'
+import Carousel from '../components/bigcarousel'
+
+
 
 export default function Home() {
   return (
     <main>
        <Navbar/>
 
-      {/* <BigCarrousel /> */}
+      <Carousel/>
+
+      {/* {<OurHistory/>} */}
 
       {/* <AboutUs /> */}
 
