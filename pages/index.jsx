@@ -1,16 +1,17 @@
 import Navbar from '../components/navbar'
-import Carousel from '../components/bigcarousel'
 
+import Carousel from '../components/bigcarousel'
+import ChamadaCursos from '../components/chamada-cursos'
 
 
 export default function Home() {
   return (
-    <main>
+    <main className='bg-black'>
        <Navbar/>
 
       <Carousel/>
 
-      {/* {<OurHistory/>} */}
+      <ChamadaCursos/>
 
       {/* <AboutUs /> */}
 
