@@ -14,8 +14,5 @@ const socialIcons = importImages(
 );
 
 const images = importImages(require.context("../public/images"));
-console.log(images);
-
-console.log(socialIcons);
 
 export default socialIcons;
