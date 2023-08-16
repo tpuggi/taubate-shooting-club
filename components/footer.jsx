@@ -67,6 +67,8 @@ const CONTATOS = [
 import Link from "next/link";
 import Image from "next/image";
 
+CURSOS.map((curso) => console.log(curso));
+
 const Footer = () => {
   return (
     <footer className="bg-gradient-to-b from-neutral-900 to-neutral-700 inter-font">
