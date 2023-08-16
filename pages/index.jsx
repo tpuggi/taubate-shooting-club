@@ -1,12 +1,12 @@
 // import Image from 'next/image'
 // import styles from '../styles/index.module.css';
-import Navbar from '../components/navbar'
-import Footer from '../components/footer'
+// import Navbar from '../components/navbar'
+import Footer from "../components/footer";
 
 export default function Home() {
   return (
-    <main>
-      <Navbar/>
+    <main className="bg-black">
+      {/* <Navbar/> */}
 
       {/* <BigCarrousel /> */}
 
@@ -15,9 +15,12 @@ export default function Home() {
       {/* <OurServices /> */}
 
       {/* <CTA /> */}
-
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
       <Footer />
-
     </main>
-  )
+  );
 }

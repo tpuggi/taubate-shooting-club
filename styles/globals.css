@@ -1,4 +1,42 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+ 
+/* @import url("next/font/google"); */
 
+@font-face {
+    font-family: bebas_neue;
+    src: url(./fonts/bebas_neue/BebasNeue-Regular.ttf);
+ }
+
+ /* fonte para título */
+.bebas_neue-font {
+    font-family: bebas_neue;
+}
+
+@font-face {
+    font-family: montserrat_classic;
+    src: url(./fonts/montserrat/Montserrat-Regular.otf);
+}
+
+.monserrat_classic-font {
+    font-family: montserrat_classic;
+}
+
+@font-face {
+    font-family: inter;
+    src: url(./fonts/inter/Inter-Regular.ttf);
+}
+
+.inter-font {
+    font-family: inter;
+}
+
+@font-face {
+    font-family: neue_montreal;
+    src: url(./fonts/neue_montreal/NeueMontreal-Regular.otf);
+}
+
+.neue_montreal-font {
+    font-family: neue_montreal;
+}
