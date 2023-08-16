@@ -1,22 +1,21 @@
 // import Image from 'next/image'
 // import styles from '../styles/index.module.css';
-import Navbar from '../components/navbar'
+// import Navbar from '../components/navbar'
+import Footer from "../components/footer";
+import Navbar from "../components/navbar";
+import Carousel from "../components/bigcarousel";
+import ChamadaCursos from "../components/chamada-cursos";
 
 export default function Home() {
   return (
-    <main>
-       <Navbar/>
+    <main className="bg-black">
+      <Navbar />
 
-      {/* <BigCarrousel /> */}
+      <Carousel />
 
-      {/* <AboutUs /> */}
+      <ChamadaCursos />
 
-      {/* <OurServices /> */}
-
-      {/* <CTA /> */}
-
-      {/* <Footer /> */}
-
+      <Footer />
     </main>
-  )
+  );
 }
