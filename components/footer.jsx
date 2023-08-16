@@ -41,10 +41,6 @@ const AJUDA = [
 
 import socialIcons from "../context/social-icons";
 
-console.log(socialIcons.map((json) => json));
-
-// var CONTACTOS = socialIcons.map
-
 const CONTATOS = [
   {
     text: "Taubate Shooting Club",
@@ -134,8 +130,10 @@ const Footer = () => {
         </div>
 
         {/* Terceira coluna */}
-        <div className="w-1/3 px-4">
-          <div className="mb-4 font-bold">Fale Conosco</div>
+        <div className="w-1/3 px-10 bg-zinc-800 text-white inter-font">
+          <div className="mb-4 font-bold text-[40px] text-center montserrat_classic-font">
+            Fale Conosco
+          </div>
           <form>
             <label className="block mb-2" htmlFor="name">
               Nome:
@@ -167,12 +165,14 @@ const Footer = () => {
               rows="4"
               required
             ></textarea>
-            <button
-              className="mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
-              type="submit"
-            >
-              Enviar
-            </button>
+            <div className="justify-center flex pt-2 pb-2">
+              <button
+                className="bg-[#BFAE95] text-center montserrat_classic-font text-red-800 text-3xl pr-20 pl-20 font-extrabold hover:shadow-2xl"
+                type="submit"
+              >
+                Enviar
+              </button>
+            </div>
           </form>
         </div>
       </div>
