@@ -3,6 +3,7 @@
 // import Navbar from '../components/navbar'
 import Footer from "../components/footer";
 import Navbar from "../components/navbar";
+import AboutUs from "../components/aboutus";
 import Carousel from "../components/bigcarousel";
 import ChamadaCursos from "../components/chamada-cursos";
 
@@ -12,6 +13,8 @@ export default function Home() {
       <Navbar />
 
       <Carousel />
+
+      <AboutUs/>
 
       <ChamadaCursos />
 
