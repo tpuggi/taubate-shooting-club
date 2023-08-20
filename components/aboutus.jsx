@@ -21,15 +21,16 @@ const AboutUs = () => {
               <li>Prática com segurança</li>
             </ul>
           </div>
-          <div className="justify-center items-center pt-8 bg-red-800 shadow border border-black border-opacity-20 bg-gradient-to-r from-[#000000] via-[#FF0000] to-[#000000] text-center text-white text-[40px] font-extrabold leading-[38.50px] mx-20">
-            <p>FAÇA PARTE DA NOSSA COMUNIDADE</p>
-            <div className="p-10">
+          <div className="justify-center items-center pt-8  bg-red-800 shadow border border-red-800 border-opacity-20 bg-gradient-to-r from-[#000000] via-[#FF0000] to-[#000000] border-8 border-red-800 text-center text-white text-[40px] font-extrabold leading-[38.50px] mx-20 neue_montreal-font">
+            <p>FAÇA PARTE DA <br></br>NOSSA COMUNIDADE</p>
+            <div className="pt-10 pb-5">
               <button
-                className="bg-red-800 shadow border border-black border-opacity-20 text-center text-3xl pr-20 pl-20 pt-5 pb-5 font-extrabold hover:shadow-2xl"
+                className="bg-red-800 shadow border border-black border-opacity-20 text-center text-3xl pr-14 pl-14 pt-3 pb-3 font-extrabold hover:shadow-2xl "
                 style={{
                   fontWeight: "bold",
-                  fontSize: "22px",
-                  border: "2px solid black",
+                  fontSize: "25px",
+                  border: "2px solid white",
+                  fontFamily: "neue_montreal",
                 }}
               >
                 SAIBA MAIS

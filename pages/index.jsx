@@ -6,6 +6,7 @@ import Navbar from "../components/navbar";
 import AboutUs from "../components/aboutus";
 import Carousel from "../components/bigcarousel";
 import ChamadaCursos from "../components/chamada-cursos";
+import OurServices from "../components/ourservices";
 
 export default function Home() {
   return (
@@ -15,6 +16,8 @@ export default function Home() {
       <Carousel />
 
       <AboutUs/>
+
+      <OurServices />
 
       <ChamadaCursos />
 
