@@ -22,6 +22,7 @@ const AboutUs = () => {
               <li>Prática com segurança</li>
             </ul>
           </div>
+    
           <div className="justify-center items-center pt-4 bg-red-800 shadow border border-black border-opacity-20 bg-gradient-to-r from-[#000000] via-[#FF0000] to-[#000000] text-center text-white text-[40px] font-extrabold leading-[38.50px] mx-20 mt-6">
             <p>FAÇA PARTE DA NOSSA COMUNIDADE</p>
             <div className="p-6">
@@ -29,8 +30,9 @@ const AboutUs = () => {
                 className="bg-red-800 shadow border border-black border-opacity-20 text-center text-3xl pr-16 pl-16 pt-4 pb-4 font-extrabold hover:shadow-2xl"
                 style={{
                   fontWeight: "bold",
-                  fontSize: "22px",
-                  border: "2px solid black",
+                  fontSize: "25px",
+                  border: "2px solid white",
+                  fontFamily: "neue_montreal",
                 }}
               >
                 SAIBA MAIS
