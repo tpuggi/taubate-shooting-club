@@ -1,4 +1,4 @@
-import clubePhoto from "../public/images/logoTSC.png";
+import oclube from "../public/images/oclube.png";
 import Image from "next/image";
 
 const AboutUs = () => {
@@ -8,18 +8,20 @@ const AboutUs = () => {
         O CLUBE
       </p>
       <div className="grid grid-cols-2 gap-2">
-        <div className="grid grid-rows-3 gap-2 h-[50%] text-white inter-font">
-          <p className="text-white inter-font">
-            Uma <strong>estrutura moderna</strong> e funcional, que facilita a
-            vida de quem quer <strong>praticar esporte</strong>, treinar defesa
-            ou melhorar habilidades técnicas.
-          </p>
-          <div className="my-2 mb-2">
+        <div className="grid grid-rows-3 gap-2 text-white inter-font items-center">
+          <div className="text-[28px] pr-10 pl-10">
+            <p className="text-white inter-font">
+              Uma <strong>estrutura moderna</strong> e funcional, que facilita a
+              vida de quem quer <strong>praticar esporte</strong>, treinar defesa
+              ou melhorar habilidades técnicas.
+            </p>
+          </div>
+          <div className="my-2 mb-2 text-[28px] pr-10 pl-10 pb-16">
             <p>Aqui você encontra:</p>
             <ul>
-              <li>Treinamentos e competições </li>
-              <li>Profissionais capacitados </li>
-              <li>Prática com segurança</li>
+              <li>• Treinamentos e competições </li>
+              <li>• Profissionais capacitados </li>
+              <li>• Prática com segurança</li>
             </ul>
           </div>
           <div className="justify-center items-center pt-4 bg-red-800 shadow border border-black border-opacity-20 bg-gradient-to-r from-[#000000] via-[#FF0000] to-[#000000] text-center text-white text-[40px] font-extrabold leading-[38.50px] mx-20 mt-6">
@@ -39,8 +41,8 @@ const AboutUs = () => {
             </div>
           </div>
         </div>
-        <div>
-          <Image src={clubePhoto} />
+        <div className="pt-16">
+          <Image src={oclube} />
         </div>
       </div>
     </div>
