@@ -1,21 +1,3 @@
-/* 2 colunas
-    primeira coluna com duas linhas
-        primeira linha com mais3 linhas 
-            primeira linha com mais 2 linhas
-                primeira linha com o título Cursos
-                segunda linha com um grid de links para os cursos
-            segunda linha com apenas um título "Nossos Serviços" 
-            terceira linha com 2 colunas
-                cada coluna com duas linhas, sendo um título e um grid de links
-        segunda linha com duas colunas
-            primeira coluna com duas linhas
-                primeira linha com um títulozão "Contato"
-                segunda linha com o endereço
-            segunda coluna com 4 linhas
-                cada linha tem um ícone e um texto
-    
-    segunda coluna com um formulário em uma divzona, isso fará um email por meio de protocolo TCP-IP
-*/
 
 import React from "react";
 
@@ -41,7 +23,9 @@ const AJUDA = [
   { text: "O que é ser sócio", link: "link" },
 ];
 
-import socialIcons from "../context/social-icons";
+import { socialIcons } from "../context/context";
+
+console.log(socialIcons);
 
 const CONTATOS = [
   {
@@ -65,7 +49,6 @@ const CONTATOS = [
     link: "https://wa.me/12997359612?text=Oi",
   },
 ];
-
 import Link from "next/link";
 import Image from "next/image";
 
