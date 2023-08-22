@@ -23,9 +23,8 @@ const Carousel = () => {
           style={{ transform: `translateX(-${currentSlide * 100}%)` }}
         >
           {bigCarouselImages.map((image, index) => (
-            <div className="w-full flex-shrink-0 h-[75vh]">
+            <div key={index} className="w-full flex-shrink-0 h-[75vh]">
               <Image
-                key={index}
                 src={image.url}
                 alt={`Image ${image.filename}`}
                 className={`w-full h-[75vh] object-cover ${
