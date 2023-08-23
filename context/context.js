@@ -21,6 +21,14 @@ export const socialIcons = importImages(
   )
 );
 
+export const coursesCarousel = importImages(
+  require.context(
+    "../public/contexts/courses-carousel/",
+    false,
+    /\.(png|jpe?g|svg)$/
+  )
+);
+
 export const bigCarouselImages = importImages(
   require.context(
     "../public/contexts/big-carousel/",

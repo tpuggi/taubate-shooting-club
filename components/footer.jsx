@@ -1,4 +1,3 @@
-
 import React from "react";
 
 const CURSOS = [
@@ -24,8 +23,6 @@ const AJUDA = [
 ];
 
 import { socialIcons } from "../context/context";
-
-console.log(socialIcons);
 
 const CONTATOS = [
   {
