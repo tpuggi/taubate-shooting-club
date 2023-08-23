@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const AboutUs = () => {
   return (
-    <div className="grid grid-rows-[auto,1fr] gap-2 mx-10 text-white">
+    <div className="grid grid-rows-[auto,1fr] gap-2 mx-10 text-white mt-32">
       <p className="text-center text-white bebas_neue-font text-[90px]">
         O CLUBE
       </p>

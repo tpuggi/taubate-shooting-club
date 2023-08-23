@@ -16,7 +16,7 @@ const navItens = [
 
 const Navbar = () => {
   return (
-    <nav className="bg-gradient-to-b from-neutral-700 to-neutral-900 p-4">
+    <nav className="bg-gradient-to-b from-neutral-700 to-neutral-900 p-4 fixed top-0 w-full z-10">
       <div className="container mx-auto">
         <div className="flex w-full">
           {/* Logo */}

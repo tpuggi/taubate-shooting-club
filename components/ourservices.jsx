@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const OurServices = () => {
     return (
-        <div className="text-white">
+        <div className="text-white mt-32">
                 <p className="text-[80px] neue_montreal-font pl-10">
                 Nossos Serviços
                 </p>
