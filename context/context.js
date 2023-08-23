@@ -21,13 +21,21 @@ export const socialIcons = importImages(
   )
 );
 
-export const coursesCarousel = importImages(
+export const campsImages = importImages(
   require.context(
-    "../public/contexts/courses-carousel/",
+    "../public/contexts/camps-image/",
     false,
     /\.(png|jpe?g|svg)$/
   )
 );
+
+// export const coursesCarousel = importImages(
+//   require.context(
+//     "../public/contexts/courses-carousel/",
+//     false,
+//     /\.(png|jpe?g|svg)$/
+//   )
+// );
 
 export const bigCarouselImages = importImages(
   require.context(

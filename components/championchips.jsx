@@ -4,6 +4,7 @@ import Image from 'next/image';
 import SomeImage from "../public/images/SomeImage.png";
 import Link from "next/link";
 import { socialIcons } from "../context/context";
+import { campsImages } from "../context/context";
 
 const CONTATOS = [
   {
@@ -26,6 +27,12 @@ const CONTATOS = [
     src: socialIcons[3].url,
     link: "https://wa.me/12997359612?text=Oi",
   },
+];
+
+const CAMPS = [
+  {
+    src: campsImages[0].url,
+  }
 ];
 
 function Championchips() {
@@ -53,24 +60,40 @@ function Championchips() {
     <div className="text-white">
                 <div className="grid grid-cols-2 gap-3 pb-20">
                         <div className="mr-2 pl-10 pt-10">
-                        <Image
-                                src={SomeImage}
-                            />
+                            {CAMPS.map((CAMPS, idx) => (
+                                  <Image
+                                    key={idx}
+                                    src={CAMPS.src}
+                                    className="w-full h-full mr-2"
+                                  />
+                              ))}
+                        </div>
+                        <div className="mr-2 pr-10 pt-10">
+                            {CAMPS.map((CAMPS, idx) => (
+                                  <Image
+                                    key={idx}
+                                    src={CAMPS.src}
+                                    className="w-full h-full mr-2"
+                                  />
+                              ))}
                         </div>
                         <div className="mr-2 pl-10 pt-10">
-                        <Image
-                                src={SomeImage}
-                            />
+                            {CAMPS.map((CAMPS, idx) => (
+                                  <Image
+                                    key={idx}
+                                    src={CAMPS.src}
+                                    className="w-full h-full mr-2"
+                                  />
+                              ))}
                         </div>
-                        <div className="mr-2 pl-10 pt-10">
-                        <Image
-                                src={SomeImage}
-                            />
-                        </div>
-                        <div className="mr-2 pl-10 pt-10">
-                        <Image
-                                src={SomeImage}
-                            />
+                        <div className="mr-2 pr-10 pt-10">
+                            {CAMPS.map((CAMPS, idx) => (
+                                  <Image
+                                    key={idx}
+                                    src={CAMPS.src}
+                                    className="w-full h-full mr-2"
+                                  />
+                              ))}
                         </div>
                 </div>
         </div>
