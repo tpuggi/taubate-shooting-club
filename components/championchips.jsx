@@ -4,6 +4,7 @@ import SomeImage from "../public/images/SomeImage.png";
 import Link from "next/link";
 import { socialIcons } from "../context/context";
 import { campsImages } from "../context/context";
+import { conteudoCamps } from "../context/context";
 import bullet from "../public/images/bullete.png";
 
 const CONTATOS = [
@@ -28,6 +29,11 @@ const CONTATOS = [
     link: "https://wa.me/12997359612?text=Oi",
   },
 ];
+const titleContact = [
+  {
+    title: "Fique ligado em nossas redes sociais para sempre receberas atualizações, como datas e inscrições para futuros campeonatos!!" 
+  }
+]
 
 const CAMP1 = [
   {
@@ -85,27 +91,55 @@ const CAMP4 = [
   },
 ];
 
+const conteudoPrincipal = [
+  {
+  title: "CAMPEONATOS",
+  subTitle: "Conteudo:",
+  text: "Todos os temas da cartilha de armamento e tiro da PF, elaborada pelo Serviço de Armamento e Tiro - SAT da Academia Nacional de Polícia.​",
+  src: conteudoCamps[1].url,
+  }, 
+  {
+    title2: "Alguns campeonatos realizados em nosso estande:",
+  }
+]
+
 function Championchips() {
   return (
     <div className="text-white mt-28">
     <div className="grid grid-cols-2 gap-3 pb-20">
             <div className="mr-2 pl-10 pt-10">
             <div className="pl-8 origin-top-left rounded-tl-[10px] rounded-tr-[10px] pl-3 pt-3 pb-3">
-                            <p className="text-[90px] bebas_neue-font">CAMPEONATOS</p>
+            {conteudoPrincipal.map((conteudoPrincipal, idx) => (
+                              <p className="text-[90px] bebas_neue-font">
+                                {conteudoPrincipal.title}
+                              </p>
+                            ))}
                     </div>
                     <div className="origin-top-left mt-1 pb-28 pl-8 pt-10">
-                            <p className="text-[32px] montserrat-font">Conteudo:</p>
-                            <p className="text-[24px] inter-font">Todos os temas da cartilha de armamento e tiro da PF, elaborada pelo Serviço de Armamento e Tiro - SAT da Academia Nacional de Polícia.​</p>
+                            {conteudoPrincipal.map((conteudoPrincipal, idx) => (
+                              <p className="text-[32px] montserrat-font">
+                                {conteudoPrincipal.subTitle}
+                              </p>
+                            ))}
+                            {conteudoPrincipal.map((conteudoPrincipal, idx) => (
+                              <p className="text-[24px] inter-font">
+                                {conteudoPrincipal.text}
+                              </p>
+                              ))}
                     </div>
             </div>
             <div className="ml-2 mt-36 pr-10 pt-10">
-            <Image
-                    src={SomeImage}
-                />
+                {conteudoPrincipal.map((conteudoPrincipal, idx) => (
+                              <Image
+                              src={conteudoPrincipal.src}
+                          />
+                              ))}
             </div>
     </div>
     <div className="ml-20 mr-20">
-              <p className="text-[80px] bebas_neue-font">Alguns campeonatos realizados em nosso estande:</p>
+    {conteudoPrincipal.map((conteudoPrincipal, idx) => (
+              <p className="text-[80px] bebas_neue-font">{conteudoPrincipal.title2}</p>
+              ))}
     </div>
     <div className="text-white">
                 <div className="grid grid-cols-2 gap-3 pb-20 m-10">
@@ -300,7 +334,9 @@ function Championchips() {
                 </div>
         </div>
         <div className="ml-20 mr-20">
-          <p className="text-[38px] montserrat-font">Fique ligado em nossas redes sociais para sempre receberas atualizações, como datas e inscrições para futuros campeonatos!!</p>
+        {titleContact.map((titleContact, idx) => (
+          <p className="text-[38px] montserrat-font">{titleContact.title}</p>
+          ))}
         </div>
         <div className="pt-20 pb-10 flex justify-around items-center space-x-4 w-full pl-3">
         {CONTATOS.map((contato, idx) => (
