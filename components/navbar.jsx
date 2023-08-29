@@ -12,6 +12,7 @@ const navItens = [
   { text: "Contato", link: "link" },
   { text: "FAQ", link: "link" },
   { text: "Seja Sócio", link: "link" },
+  { text: "Campeonatos", link: "pages\champion-page.jsx"}
 ];
 
 const Navbar = () => {
