@@ -44,3 +44,11 @@ export const bigCarouselImages = importImages(
     /\.(png|jpe?g|svg)$/
   )
 );
+
+export const coursesCarousel = importImages(
+  require.context(
+    "../public/contexts/courses-carousel/",
+    false,
+    /\.(png|jpe?g|svg)$/
+  )
+);

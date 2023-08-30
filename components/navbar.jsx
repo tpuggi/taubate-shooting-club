@@ -6,13 +6,13 @@ import Image from "next/image";
 import Link from "next/link";
 
 const navItens = [
-  { text: "Home", link: "link" },
-  { text: "Serviços", link: "link" },
-  { text: "Cursos", link: "link" },
-  { text: "Contato", link: "link" },
-  { text: "FAQ", link: "link" },
-  { text: "Seja Sócio", link: "link" },
-  { text: "Campeonatos", link: "pages\champions-page.jsx"}
+  { text: "Home", link: "/" },
+  { text: "Serviços", link: "/servicos" },
+  { text: "Cursos", link: "/cursos" },
+  { text: "Contato", link: "/contato" },
+  { text: "FAQ", link: "/faq" },
+  { text: "Seja Sócio", link: "/seja-socio" },
+  { text: "Campeonatos", link: "/campeonatos" },
 ];
 
 const Navbar = () => {
