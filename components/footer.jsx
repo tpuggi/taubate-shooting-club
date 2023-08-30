@@ -47,8 +47,11 @@ const CONTATOS = [
 ];
 import Link from "next/link";
 import Image from "next/image";
+import { useState } from "react";
 
 const Footer = () => {
+  const [message, setMessage] = useState("");
+  const [name, setName] = useState("");
   return (
     <footer className="bg-gradient-to-b from-neutral-900 to-neutral-700 inter-font">
       <div className="container mx-auto py-8 flex justify-around">
@@ -138,42 +141,48 @@ const Footer = () => {
               Nome:
             </label>
             <input
-              className="w-full p-2 border rounded"
+              className="w-full p-2 border rounded text-black"
+              placeholder="Seu nome"
+              onChange={(e) => setName(e.target.value)}
               type="text"
               id="name"
               name="name"
               required
             />
-            <label className="block mt-4 mb-2" htmlFor="email">
-              Email:
+            <label className="block mt-4 mb-2" htmlFor="telefone">
+              Telefone:
             </label>
             <input
-              className="w-full p-2 border rounded"
-              type="email"
-              id="email"
-              name="email"
+              className="w-full p-2 border rounded text-black"
+              placeholder="Seu telefone"
+              type="text"
+              id="telefone"
+              name="telefone"
               required
             />
             <label className="block mt-4 mb-2" htmlFor="message">
               Mensagem:
             </label>
             <textarea
-              className="w-full p-2 border rounded"
+              className="w-full p-2 border rounded text-black"
+              placeholder="Eu gostaria de aprender a atirar ou tirar certificação para poder atirar"
+              onChange={(e) => setMessage(e.target.value)}
               id="message"
               name="message"
               rows="4"
               required
             ></textarea>
             <div className="justify-center flex pt-2 pb-2">
-              <button
+              <Link
                 className="bg-[#BFAE95] text-center text-[22px] text-red-800 text-3xl px-10 py-1 font-extrabold hover:shadow-2xl"
                 style={{
                   fontWeight: "bold",
                   border: "2px solid black",
                 }}
+                href={`https://wa.me/12997359612?text="Eu sou ${name}, ${message}"`}
               >
                 ENVIAR
-              </button>
+              </Link>
             </div>
           </form>
         </div>
