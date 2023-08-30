@@ -3,6 +3,9 @@
 @tailwind utilities;
  
 /* @import url("next/font/google"); */
+html {
+    scroll-behavior: smooth;
+}
 
 @font-face {
     font-family: bebas_neue;
