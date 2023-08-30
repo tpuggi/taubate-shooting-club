@@ -94,11 +94,11 @@ const Navbar = () => {
           </div>
           <div className="w-1/6 flex items-center justify-around">
             <Link href="https://www.facebook.com/taubateshootingclub">
-              <Image src={botaoFace} className="h-10" />
+              <Image src={botaoFace} alt="facebook icon" className="h-10" />
             </Link>
 
             <Link href="https://www.instagram.com/taubateshootingclub">
-              <Image src={botaoInsta} className="h-10" />
+              <Image src={botaoInsta} alt="instagram icon" className="h-10" />
             </Link>
           </div>
         </div>

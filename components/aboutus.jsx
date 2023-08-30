@@ -12,8 +12,8 @@ const AboutUs = () => {
           <div className="text-[28px] pr-10 pl-10">
             <p className="text-white inter-font">
               Uma <strong>estrutura moderna</strong> e funcional, que facilita a
-              vida de quem quer <strong>praticar esporte</strong>, treinar defesa
-              ou melhorar habilidades técnicas.
+              vida de quem quer <strong>praticar esporte</strong>, treinar
+              defesa ou melhorar habilidades técnicas.
             </p>
           </div>
           <div className="my-2 mb-2 text-[28px] pr-10 pl-10 pb-16">
@@ -42,7 +42,7 @@ const AboutUs = () => {
           </div>
         </div>
         <div className="pt-16">
-          <Image src={oclube} />
+          <Image src={oclube} alt="Imagem do clube" />
         </div>
       </div>
     </div>

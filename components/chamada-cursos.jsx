@@ -39,7 +39,7 @@ const ChamadaCursos = () => {
         </p>
         <p style={{ fontSize: "35px" }}>AGENDE UMA VISITA AGORA MESMO!</p>
         <div className="flex justify-center py-4">
-          <Image src={bullet} className="w-[89px] h-[22px]" />
+          <Image src={bullet} alt="bullet icon" className="w-[89px] h-[22px]" />
         </div>
         <div className="flex justify-center items-center py-4">
           <button
