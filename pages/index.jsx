@@ -8,8 +8,6 @@ import Carousel from "../components/bigcarousel";
 import ChamadaCursos from "../components/chamada-cursos";
 import OurServices from "../components/ourservices";
 import OurHistory from "@/components/ourhistory";
-import Championchips from "@/components/championchips"
-
 
 export default function Home() {
   return (
@@ -18,13 +16,13 @@ export default function Home() {
 
       <Carousel />
 
-      <AboutUs/>
+      <AboutUs />
 
-      <OurHistory/>
+      <OurHistory />
 
-      <OurServices />
+      <OurServices id="servicos" />
 
-      <ChamadaCursos />
+      <ChamadaCursos id="cursos" />
 
       <Footer />
     </main>
