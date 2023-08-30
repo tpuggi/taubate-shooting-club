@@ -1,20 +1,28 @@
 import bullet from "../public/images/bullete.png";
 import React, { useState, useEffect } from "react";
 
-import { bigCarouselImages } from "../context/context";
+import { coursesCarousel } from "../context/context";
 import Image from "next/image";
 
 const ChamadaCursos = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const totalSlides = bigCarouselImages.length;
+  const totalSlides = coursesCarousel.length;
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prevSlide) => (prevSlide + 1) % totalSlides);
-    }, 3000);
+    }, 5000);
 
     return () => clearInterval(interval);
   });
+
+  const nextSlide = () => {
+    setCurrentSlide((prevSlide) => (prevSlide + 1) % totalSlides);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prevSlide) => (prevSlide - 1 + totalSlides) % totalSlides);
+  };
 
   return (
     <div className="flex justify-center items-center bg-red-800 bg-opacity-75">
@@ -45,12 +53,14 @@ const ChamadaCursos = () => {
         <div className="flex justify-center mx-25 my-10 py-10 overflow-hidden bg-cover">
           <div
             className="flex ease-in-out transition-transform duration-300"
-            style={{ transform: `translateX(-${currentSlide * 33}%)` }}
+            style={{
+              transform: `translateX(-${(currentSlide * 100) / 3}%)`,
+            }}
           >
-            {bigCarouselImages.map((image, index) => (
+            {coursesCarousel.map((image, index) => (
               <div
                 key={index}
-                className="flex-none w-1/3 transition-transform transform bg-black translate-x-0 group-hover:translate-x-[33.33%] duration-300 mx-5"
+                className="flex-none w-1/3 transition-transform transform bg-black translate-x-0 duration-300 mx-5"
               >
                 <div class="rounded overflow-hidden shadow-lg">
                   <Image class="w-full" src={image.url} alt={image.fileName} />
@@ -61,6 +71,33 @@ const ChamadaCursos = () => {
               </div>
             ))}
           </div>
+        </div>
+        <div className="justify-between flex px-10 z-0 text-[20px]">
+          <button
+            onClick={prevSlide}
+            className="bg-black hover:bg-[#BFAE95] text-white rounded px-4 py-2 left-0 transform -translate-y-1/2"
+          >
+            &lt; {/* Ícone de seta para a esquerda */}
+          </button>
+
+          <div className="indicators flex justify-center mt-3">
+            {coursesCarousel.map((_, index) => (
+              <span
+                key={index}
+                className={`w-3 h-3 bg-gray-300 rounded-full mx-1 cursor-pointer ${
+                  index === currentSlide ? "bg-gray-700" : ""
+                }`}
+                onClick={() => setCurrentSlide(index)}
+              ></span>
+            ))}
+          </div>
+
+          <button
+            onClick={nextSlide}
+            className="bg-black hover:bg-[#BFAE95] text-white rounded px-4 py-2 right-0 transform -translate-y-1/2"
+          >
+            &gt; {/* Ícone de seta para a direita */}
+          </button>
         </div>
       </div>
     </div>
