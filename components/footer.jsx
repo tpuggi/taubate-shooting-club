@@ -1,25 +1,24 @@
 import React from "react";
 
 const CURSOS = [
-  { text: "Fundamentos do Tiro", link: "link1" },
-  { text: "Capacitação", link: "link2" },
-  { text: "Armamento e Tiro", link: "link3" },
-  { text: "Operador de Pistola", link: "link4" },
-  { text: "Atirador Esportivo", link: "link5" },
-  { text: "Tiro Tático Defensivo", link: "link5" },
+  { text: "Fundamentos do Tiro", link: "/cursos/fundamentos-do-tiro" },
+  { text: "Capacitação", link: "/cursos/capacitacao" },
+  { text: "Armamento e Tiro", link: "/cursos/armamento-e-tiro" },
+  { text: "Operador de Pistola", link: "/cursos/operador-pistola" },
+  { text: "Atirador Esportivo", link: "/cursos/atirador-esportivo" },
+  { text: "Tiro Tático Defensivo", link: "/cursos/tiro-tatico-defensivo" },
 ];
 
 const INFORMAÇÕES = [
-  { text: "Sobre Nós", link: "link1" },
+  { text: "Sobre Nós", link: "" },
   { text: "Instrutores", link: "link2" },
-  { text: "Endereço", link: "link3" },
-  { text: "Contato", link: "link3" },
+  { text: "Contato", link: "/contato" },
 ];
 
 const AJUDA = [
   { text: "Regimento Interno", link: "link" },
-  { text: "FAQ", link: "link" },
-  { text: "O que é ser sócio", link: "link" },
+  { text: "FAQ", link: "/faq" },
+  { text: "O que é ser sócio", link: "/seja-socio" },
 ];
 
 import { socialIcons } from "../context/context";
@@ -55,7 +54,9 @@ const Footer = () => {
       <div className="container mx-auto py-8 flex justify-around">
         {/* Primeira coluna */}
         <div className="w-2/3 px-4 text-white text-center">
-          <div className="mb-4 font-bold text-[25px]">Cursos</div>
+          <Link href="/cursos" className="mb-4 font-bold text-[25px]">
+            Cursos
+          </Link>
           <div className="grid grid-cols-3 gap-2">
             {CURSOS.map((curso, idx) => (
               <Link
@@ -128,7 +129,7 @@ const Footer = () => {
         </div>
 
         {/* Terceira coluna */}
-        <div className="w-1/3 px-10 bg-zinc-800 text-white inter-font">
+        <div className="w-1/3 px-10 bg-gradient-to-b from-neutral-900 to-neutral-700 border-neutral-700 text-white inter-font">
           <div className="mb-4 font-bold text-[40px] text-center montserrat_classic-font">
             Fale Conosco
           </div>
@@ -165,10 +166,13 @@ const Footer = () => {
             ></textarea>
             <div className="justify-center flex pt-2 pb-2">
               <button
-                className="bg-[#BFAE95] text-center montserrat_classic-font text-red-800 text-3xl pr-20 pl-20 font-extrabold hover:shadow-2xl"
-                type="submit"
+                className="bg-[#BFAE95] text-center text-[22px] text-red-800 text-3xl px-10 py-1 font-extrabold hover:shadow-2xl"
+                style={{
+                  fontWeight: "bold",
+                  border: "2px solid black",
+                }}
               >
-                Enviar
+                ENVIAR
               </button>
             </div>
           </form>
