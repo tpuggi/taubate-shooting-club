@@ -3,6 +3,8 @@ import React, { useState, useEffect } from "react";
 
 import { coursesCarousel } from "../context/context";
 import Image from "next/image";
+import Link from "next/link";
+import slugify from "slugify";
 
 const ChamadaCursos = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -62,12 +64,26 @@ const ChamadaCursos = () => {
                 key={index}
                 className="flex-none w-1/3 transition-transform transform bg-black translate-x-0 duration-300 mx-5"
               >
-                <div class="rounded overflow-hidden shadow-lg">
+                <Link
+                  href={`/cursos/${slugify(image.fileName, {
+                    replacement: "-",
+                    lower: true,
+                    strict: true,
+                  })
+                    .replace("png", "")
+                    .replace("jpg", "")}`}
+                  class="rounded overflow-hidden shadow-lg flex flex-col justify-between h-full"
+                >
                   <Image class="w-full" src={image.url} alt={image.fileName} />
                   <div class="px-6 py-4 self-center">
-                    <div class="font-bold text-xl mb-2">{image.fileName}</div>
+                    <div class="font-bold text-xl mb-2">
+                      {image.fileName
+                        .replace(".png", "")
+                        .replace(".jpg", "")
+                        .replace("./", "")}
+                    </div>
                   </div>
-                </div>
+                </Link>
               </div>
             ))}
           </div>
