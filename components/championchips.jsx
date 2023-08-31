@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Image from "next/image";
-import SomeImage from "../public/images/SomeImage.png";
 import Link from "next/link";
 import { socialIcons } from "../context/context";
 import { campsImages } from "../context/context";

@@ -11,7 +11,7 @@ const navItens = [
   { text: "Home", link: "/" },
   { text: "Serviços", link: "servicos" },
   { text: "Cursos", link: "cursos" },
-  { text: "Contato", link: "/contato" },
+  { text: "Contato", link: "/contatos" },
   { text: "FAQ", link: "/faq" },
   { text: "Seja Sócio", link: "/seja-socio" },
   { text: "Campeonatos", link: "/campeonatos" },
