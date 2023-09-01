@@ -74,11 +74,11 @@ const ChamadaCursos = () => {
                   })
                     .replace("png", "")
                     .replace("jpg", "")}`}
-                  class="rounded overflow-hidden shadow-lg flex flex-col justify-between h-full"
+                  className="rounded overflow-hidden shadow-lg flex flex-col justify-between h-full"
                 >
-                  <Image class="w-full" src={image.url} alt={image.fileName} />
-                  <div class="px-6 py-4 self-center">
-                    <div class="font-bold text-xl mb-2">
+                  <Image className="w-full" src={image.url} alt={image.fileName} />
+                  <div className="px-6 py-4 self-center">
+                    <div className="font-bold text-xl mb-2">
                       {image.fileName
                         .replace(".png", "")
                         .replace(".jpg", "")
