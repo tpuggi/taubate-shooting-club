@@ -13,7 +13,9 @@ export default function Home() {
 
       <Contatos />
 
-      
+      <ChamadaCursos id="cursos" />
+
+      <Footer />
     </main>
   );
 }
