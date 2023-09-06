@@ -2,7 +2,6 @@ import Image from "next/image";
 import { Link as ScrollLink } from "react-scroll/modules";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import mapaTSC from "../public/images/mapaTSC.png";
 import { socialIcons } from "../context/context";
 import Map from "../components/mapaTSC";
 

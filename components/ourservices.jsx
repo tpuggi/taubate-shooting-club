@@ -52,10 +52,10 @@ const OurServices = () => {
       <p className="text-[80px] neue_montreal-font pl-10">Nossos Serviços</p>
       <p className="text-[25px] pl-10 pt-5">
         Realizamos diversos <strong>cursos de capacitação</strong> com convênio
-        para aplicar os <br></br>testes exigidos para a{" "}
+        para aplicar os testes exigidos para a{" "}
         <strong>aquisição</strong> de armas de fogo, <strong>renovação</strong>{" "}
-        de registros <br></br>ou <strong>expedição</strong> de Certificado de
-        Registro de CAC (Colecionador - Atirador ou <br></br> Caçador).
+        de registros ou <strong>expedição</strong> de Certificado de
+        Registro de CAC (Colecionador - Atirador ou  Caçador).
       </p>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-3 pb-20">
         <div className="mr-2 pl-10 pt-10 pr-10">
