@@ -6,7 +6,7 @@ import Navbar from "../components/navbar";
 import ChamadaCursos from "../components/chamada-cursos";
 import Championchips from "@/components/championchips"
 
-export default function Home() {
+export default function Camps() {
   return (
     <main className="bg-black">
       <Navbar />

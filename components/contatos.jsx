@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import mapaTSC from "../public/images/mapaTSC.png";
 import { socialIcons } from "../context/context";
+import Map from "../components/mapaTSC";
 
 const CONTATOS = [
     {
@@ -40,7 +41,7 @@ function Contatos() {
                     <p className="mb-4 inter-font">• Nosso clube é o primeiro a ser instalado no Shopping (Via Auto Shopping), possuindo amplo estacionamento, fácil acesso e segurança.</p>
                     <p className="inter-font">• Horário de Funcionamento 13h - 19h, de segunda à sexta-feira, e sábado das 10h às 18h aos sábados. Domingos são reservados para treinamentos e competições. </p>
                 </div>
-                <div className="pl-12 text-[22px]">
+                <div className="pl-8 text-[22px]">
                     {CONTATOS.map((contato, idx) => (
                         <Link
                         key={idx}
@@ -59,8 +60,8 @@ function Contatos() {
                 </div>
             </div>
         </div>
-        <div className="pl-10 pt-10">
-            <Image src={mapaTSC} alt="Imagem do clube" className="w-full pr-20" />
+        <div className="pl-10 pt-10 pr-20">
+            <Map />
             <p className="text-[22px] text-white pt-10 inter-font">Av. Dom Pedro I, 7231 - Shopping The PLace (Via Auto Shopping) - Estoril, Taubaté SP, 12091-000</p>
         </div>
     </div>

@@ -6,7 +6,7 @@ import Navbar from "../components/navbar";
 import ChamadaCursos from "../components/chamada-cursos";
 import Contatos from "@/components/contatos"
 
-export default function Home() {
+export default function Contats() {
   return (
     <main className="bg-black">
       <Navbar />

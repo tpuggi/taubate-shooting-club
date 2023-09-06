@@ -13,7 +13,7 @@ const navItens = [
   { text: "Cursos", link: "cursos" },
   { text: "Contato", link: "/contatos" },
   { text: "FAQ", link: "/faq" },
-  { text: "Seja Sócio", link: "/seja-socio" },
+  { text: "Seja Sócio", link: "/sejaSocio" },
   { text: "Campeonatos", link: "/campeonatos" },
 ];
 
