@@ -3,7 +3,7 @@ import botaoFace from "../public/images/Facebookicon.png";
 import botaoInsta from "../public/images/Instagramicon.png";
 
 import Image from "next/image";
-import NavItems from "./atoms/navItems";
+import NavItems from "./NavItems";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
