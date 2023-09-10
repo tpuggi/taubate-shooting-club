@@ -4,7 +4,7 @@
 import Footer from "../components/footer";
 import Navbar from "../components/navbar";
 import ChamadaCursos from "../components/chamada-cursos";
-import Championchips from "@/components/championchips"
+import Championchips from "@/components/championchips";
 
 export default function Camps() {
   return (

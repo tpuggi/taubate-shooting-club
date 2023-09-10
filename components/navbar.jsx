@@ -3,19 +3,9 @@ import botaoFace from "../public/images/Facebookicon.png";
 import botaoInsta from "../public/images/Instagramicon.png";
 
 import Image from "next/image";
-import { Link as ScrollLink } from "react-scroll/modules";
+import NavItems from "./NavItems";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-
-const navItens = [
-  { text: "Home", link: "/" },
-  { text: "Serviços", link: "servicos" },
-  { text: "Cursos", link: "cursos" },
-  { text: "Contato", link: "/contatos" },
-  { text: "FAQ", link: "/faq" },
-  { text: "Seja Sócio", link: "/sejaSocio" },
-  { text: "Campeonatos", link: "/campeonatos" },
-];
 
 const Navbar = () => {
   const [clientWindowHeight, setClientWindowHeight] = useState("");
@@ -67,27 +57,7 @@ const Navbar = () => {
             <div className="p-3">
               <hr className="px-20" />
             </div>
-            <div className="flex justify-around items-center space-x-4 w-full pl-3">
-              {navItens.map((navItem, idx) =>
-                navItem.link.startsWith("/") ? (
-                  <Link key={idx} className="text-white" href={navItem.link}>
-                    {navItem.text}
-                  </Link>
-                ) : (
-                  <ScrollLink
-                    key={idx}
-                    className="text-white cursor-pointer"
-                    to={`${navItem.link}`}
-                    spy={true}
-                    smooth={true}
-                    offset={-50}
-                    duration={200}
-                  >
-                    {navItem.text}
-                  </ScrollLink>
-                )
-              )}
-            </div>
+            <NavItems />
             <div className="p-3">
               <hr className="px-20" />
             </div>
