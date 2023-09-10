@@ -1,28 +1,29 @@
 import Link from "next/link";
 import { Link as ScrollLink } from "react-scroll";
+import { useState } from "react";
 
 const NAVITEMS = [
   { text: "Home", link: "/" },
-  { text: "Serviços", link: "servicos" },
   {
     text: "Cursos",
-    link: "cursos",
+    link: "/",
+    scroll: "cursos",
     dropdown: [
       {
         text: "Fundamentos do Tiro",
-        link: "/cursos/fundamentos-tiro",
+        drop_link: "/cursos/fundamentos-tiro",
       },
       {
         text: "Capacitação",
-        link: "/cursos/capacitacao",
+        drop_link: "/cursos/capacitacao",
       },
       {
         text: "Operador de Pistola",
-        link: "/cursos/operador-pistola",
+        drop_link: "/cursos/operador-pistola",
       },
       {
         text: "Armamento e Tiro",
-        link: "/cursos/armamento-e-tiro",
+        drop_link: "/cursos/armamento-e-tiro",
       },
     ],
   },
@@ -33,19 +34,27 @@ const NAVITEMS = [
 ];
 
 function NavItems() {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const handleDropdownToggle = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
   return (
-    <>
+    <div className="flex justify-around items-center space-x-4 w-full pl-3 text-white">
       {NAVITEMS.map((navItem, idx) => {
-        if (navItem.link.startsWith("/")) {
+        if (navItem.scroll) {
           if (navItem.dropdown) {
             return (
               <div key={idx}>
-                <Link
-                  id="dropdownHoverLink"
-                  data-dropdown-toggle="dropdownHover"
-                  data-dropdown-trigger="hover"
-                  className="text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center"
-                  href={navItem.link}
+                <ScrollLink
+                  className="text-center inline-flex items-center cursor-pointer hover:text-gray-400"
+                  to={navItem.scroll}
+                  spy={true}
+                  smooth={true}
+                  offset={-50}
+                  onMouseEnter={handleDropdownToggle}
+                  duration={500}
                 >
                   {navItem.text}
                   <svg
@@ -63,108 +72,89 @@ function NavItems() {
                       d="m1 1 4 4 4-4"
                     />
                   </svg>
-                </Link>
-                <div
-                  id="dropdownHover"
-                  className="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44"
-                >
-                  <ul
-                    className="py-2 text-sm text-gray-700"
-                    aria-labelledby="dropdownHoverLink"
-                  >
-                    {navItem.dropdown.map((dropdownItem, idx2) => (
-                      <li key={idx2}>
-                        <Link
-                          className="block px-4 py-2 hover:bg-gray-100 "
-                          href={dropdownItem.link}
-                        >
-                          {dropdownItem.text}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                </ScrollLink>
+                {navItem.dropdown && (
+                  <div className="relative group">
+                    {isDropdownOpen && (
+                      <ul
+                        className="absolute mt-2 p-2 bg-gradient-to-b from-neutral-700 to-neutral-900 shadow-lg rounded-lg flex flex-col whitespace-nowrap"
+                        onMouseLeave={handleDropdownToggle}
+                      >
+                        {navItem.dropdown.map((subItem, idx2) => (
+                          <li key={idx2} className="pb-1">
+                            <Link
+                              href={subItem.drop_link}
+                              className=" hover:text-gray-400"
+                            >
+                              {subItem.text}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+                )}
               </div>
             );
           } else {
             return (
-              <Link key={idx} className="text-white" href={navItem.link}>
+              <ScrollLink
+                key={idx}
+                to={navItem.scroll}
+                spy={true}
+                smooth={true}
+                offset={-50}
+                duration={500}
+                className="text-white hover:text-gray-400"
+                href={navItem.link}
+              >
                 {navItem.text}
-              </Link>
+              </ScrollLink>
             );
           }
         } else if (navItem.dropdown) {
           return (
-            <div
-              id="dropdownHoverLink"
-              data-dropdown-toggle="dropdownHover"
-              data-dropdown-trigger="hover"
+            <Link
               key={idx}
-            >
-              <ScrollLink
-                className="text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center cursor-pointer"
-                to={navItem.link}
-                spy={true}
-                smooth={true}
-                offset={-50}
-                duration={200}
-              >
-                {navItem.text}
-                <svg
-                  className="w-2.5 h-2.5 ml-2.5"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 10 6"
-                >
-                  <path
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="m1 1 4 4 4-4"
-                  />
-                </svg>
-              </ScrollLink>
-              <div
-                id="dropdownHover"
-                className="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 "
-              >
-                <ul
-                  className="py-2 text-sm text-gray-700 "
-                  aria-labelledby="dropdownHoverLink"
-                >
-                  {navItem.dropdown.map((dropdownItem, idx2) => (
-                    <li key={idx2}>
-                      <Link
-                        className="block px-4 py-2 hover:bg-gray-100 "
-                        href={dropdownItem.link}
-                      >
-                        {dropdownItem.text}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          );
-        } else {
-          return (
-            <ScrollLink
-              key={idx}
-              className="text-white cursor-pointer"
-              to={`${navItem.link}`}
+              className="text-center inline-flex items-center cursor-pointer hover:text-gray-400"
+              href={navItem.link}
               spy={true}
               smooth={true}
               offset={-50}
-              duration={200}
+              duration={500}
+              onMouseEnter={handleDropdownToggle}
             >
               {navItem.text}
-            </ScrollLink>
+              <svg
+                className="w-2.5 h-2.5 ml-2.5"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 10 6"
+              >
+                <path
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="m1 1 4 4 4-4"
+                />
+              </svg>
+            </Link>
+          );
+        } else {
+          return (
+            <Link
+              key={idx}
+              className="text-white hover:text-gray-400"
+              href={navItem.link}
+            >
+              {navItem.text}
+            </Link>
           );
         }
       })}
-    </>
+    </div>
   );
 }
 

@@ -57,9 +57,7 @@ const Navbar = () => {
             <div className="p-3">
               <hr className="px-20" />
             </div>
-            <div className="flex justify-around items-center space-x-4 w-full pl-3">
-              <NavItems />
-            </div>
+            <NavItems />
             <div className="p-3">
               <hr className="px-20" />
             </div>
