@@ -4,16 +4,16 @@
 import Footer from "../components/footer";
 import Navbar from "../components/navbar";
 import ChamadaCursos from "../components/chamada-cursos";
-import Championchips from "@/components/championchips";
+import Contatos from "@/components/contatos"
 
-export default function Camps() {
+export default function Contats() {
   return (
     <main className="bg-black">
       <Navbar />
 
-      <Championchips />
+      <Contatos />
 
-      <ChamadaCursos />
+      <ChamadaCursos id="cursos" />
 
       <Footer />
     </main>
