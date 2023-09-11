@@ -31,7 +31,7 @@ const CONTATOS = [
 const titleContact = [
   {
     title:
-      "Fique ligado em nossas redes sociais para sempre receberas atualizações, como datas e inscrições para futuros campeonatos!!",
+      "Fique ligado em nossas redes sociais para sempre receber atualizações, como datas e inscrições para futuros campeonatos!!",
   },
 ];
 

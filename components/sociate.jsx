@@ -1,6 +1,36 @@
 import Image from "next/image";
 import Link from "next/link";
 import arma from "../public/images/armaPrin.png";
+import { socialIcons } from "../context/context";
+
+const CONTATOS = [
+    {
+    text: "Taubate Shooting Club",
+    src: socialIcons[0].url,
+    link: "https://www.facebook.com/taubateshootingclub",
+    },
+    {
+    text: "taubateshootingclub",
+    src: socialIcons[1].url,
+    link: "https://www.instagram.com/taubateshootingclub/",
+    },
+    {
+    text: "(12) 3681-4106",
+    src: socialIcons[2].url,
+    link: "tel:+1236814106",
+    },
+    {
+    text: "(12) 99735-9612",
+    src: socialIcons[3].url,
+    link: "https://wa.me/12997359612?text=Oi",
+    },
+];
+const titleContact = [
+    {
+    title:
+        "Fique ligado em nossas redes sociais para sempre receber atualizações!!",
+    },
+];
 
 function sociate () {
         return (
@@ -103,8 +133,29 @@ function sociate () {
                                 >
                                     SAIBA MAIS
                                 </button>
-                                </div>
+                            </div>
                         </div>
+                    </div>
+                </div>
+                <div className="text-white text-center">
+                    <div className="ml-20 mr-20">
+                        {titleContact.map((titleContact, idx) => (
+                        <p className="text-[38px] montserrat-font" key={idx}>
+                            {titleContact.title}
+                        </p>
+                        ))}
+                    </div>
+                    <div className="pt-20 pb-10 flex justify-around items-center space-x-4 w-full pl-3">
+                        {CONTATOS.map((contato, idx) => (
+                        <Link key={idx} href={contato.link} className="flex items-center">
+                            <Image
+                            src={contato.src}
+                            alt={contato.text + "ícone"}
+                            className="w-10 h-10 mr-2"
+                            />
+                            <p className="text-[24px] neue_montreal-font">{contato.text}</p>
+                        </Link>
+                        ))}
                     </div>
                 </div>
         </div>
