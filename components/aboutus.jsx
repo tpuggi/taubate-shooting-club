@@ -9,8 +9,8 @@ const AboutUs = () => {
         O CLUBE
       </p>
       <div className="grid grid-cols-2 gap-2">
-        <div className="grid grid-rows-3 gap-2 text-white inter-font items-center">
-          <div className="text-[28px] pr-10 pl-10">
+        <div className="grid grid-rows-3 ml-[5em] gap-2 text-white inter-font items-center">
+          <div className="text-[2em] pr-10 pl-10">
             <p className="text-white inter-font">
               Uma <strong>estrutura moderna</strong> e funcional, que facilita a
               vida de quem quer <strong>praticar esporte</strong>, treinar
