@@ -1,3 +1,4 @@
+import Link from "next/link";
 import oclube from "../public/images/oclube.png";
 import Image from "next/image";
 
@@ -24,20 +25,22 @@ const AboutUs = () => {
               <li>• Prática com segurança</li>
             </ul>
           </div>
-          <div className="border-5 border-red justify-center items-center pt-4 bg-red-800 shadow border border-black border-opacity-20 bg-gradient-to-r from-[#000000] via-[#FF0000] to-[#000000] text-center text-white text-[40px] font-extrabold leading-[38.50px] mx-20 mt-6">
-            <p>FAÇA PARTE DA NOSSA COMUNIDADE</p>
+          <div className="border-5 border-red justify-center items-center pt-4 shadow solid border-red-800 border-[5px] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-black via-black to-red-800 text-center text-white text-[2em] font-extrabold leading-[38.50px] mx-20 mt-6">
+            <p className="montserrat_classic-font font-bold mx-2">
+              FAÇA PARTE DA NOSSA COMUNIDADE
+            </p>
             <div className="p-6">
-              <button
-                className="bg-red-800 shadow border border-black border-opacity-20 text-center text-3xl pr-16 pl-16 pt-4 pb-4 font-extrabold hover:shadow-2xl"
+              <Link
+                href="/seja-socio"
+                className="bg-red-800 shadow border-white bebas_neue-font text-center px-16 py-4 font-extrabold hover:shadow-2xl"
                 style={{
                   fontWeight: "bold",
-                  fontSize: "25px",
+                  fontSize: "1em",
                   border: "2px solid white",
-                  fontFamily: "neue_montreal",
                 }}
               >
                 SAIBA MAIS
-              </button>
+              </Link>
             </div>
           </div>
         </div>
