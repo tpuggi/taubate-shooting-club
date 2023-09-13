@@ -22,9 +22,9 @@ const NAVITEMS = [
       },
     ],
   },
-  { text: "Contato", link: "/contato" },
+  { text: "Contato", link: "/contatos" },
   { text: "FAQ", link: "/faq" },
-  { text: "Seja Sócio", link: "/seja-socio" },
+  { text: "Seja Sócio", link: "/sejaSocio" },
   { text: "Campeonatos", link: "/campeonatos" },
 ];
 
