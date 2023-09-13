@@ -54,11 +54,11 @@ const Footer = () => {
   const [name, setName] = useState("");
   return (
     <footer className="bg-gradient-to-b from-neutral-900 to-neutral-700 inter-font">
-      <div className="container mx-auto py-8 flex justify-around ">
+      <div className="container mx-auto py-8 flex flex-wrap justify-around">
         {/* Primeira coluna */}
-        <div className="w-2/3 px-4 text-white grid grid-rows-2">
-          <div className="h-2/3 px-4 text-white flex justify-between">
-            <div>
+        <div className="md:w-2/3 px-4 text-white flex flex-wrap justify-between md:grid md:grid-rows-2">
+          <div className="md:h-2/3 px-4 text-white flex flex-wrap justify-around">
+            <div className="my-2">
               <Link href="/cursos" className="mb-2 font-bold text-[25px]">
                 Cursos
               </Link>
@@ -74,9 +74,9 @@ const Footer = () => {
                 ))}
               </div>
             </div>
-            <div>
+            <div className="my-2">
               <div className="font-bold mb-2 text-[25px]">Informações</div>
-              <div className="grid grid-rows-n gap-2">
+              <div className="md:grid md:grid-rows-n flex flex-wrap gap-2">
                 {INFORMAÇÕES.map((info, idx) => (
                   <Link
                     key={idx}
@@ -88,7 +88,7 @@ const Footer = () => {
                 ))}
               </div>
             </div>
-            <div>
+            <div className="my-2">
               <div className="font-bold text-[25px]">Ajuda</div>
               <div className="grid grid-rows-n gap-2">
                 {AJUDA.map((help, idx) => (
@@ -106,15 +106,15 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="grid grid-cols-2 gap-2 pt-10">
-            <div className="grid grid-rows-2 text-center gap-2">
+          <div className="md:grid md:grid-cols-2 flex flex-wrap gap-2 pt-10 pb-5">
+            <div className="md:grid md:grid-rows-2 text-center gap-2">
               <h1 className="mb-4 font-bold text-[40px]">Contato</h1>
               <div className="mb-4 font-bold">
                 Av. Dom Pedro I, 7231 - Taubaté/SP (The Place - Via Auto
                 Shopping) CEP 12091-000
               </div>
             </div>
-            <div className="grid grid-rows-4 gap-2 justify-center text-white">
+            <div className="md:grid md:grid-rows-4 flex flex-wrap gap-2 justify-center text-white">
               {CONTATOS.map((contato, idx) => (
                 <Link
                   key={idx}
@@ -134,7 +134,7 @@ const Footer = () => {
         </div>
 
         {/* Segunda coluna */}
-        <div className="w-1/3 px-10 bg-gradient-to-b from-neutral-900 to-neutral-700 border-neutral-700 text-white inter-font">
+        <div className="md:w-1/3 px-10 bg-gradient-to-b from-neutral-900 to-neutral-700 border-neutral-700 text-white inter-font items-center justify-center">
           <div className="mb-4 font-bold text-[40px] text-center montserrat_classic-font">
             Fale Conosco
           </div>
