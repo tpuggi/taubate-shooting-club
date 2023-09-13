@@ -2,6 +2,9 @@ import Link from "next/link";
 import { Link as ScrollLink } from "react-scroll";
 import { useState } from "react";
 
+
+
+
 const NAVITEMS = [
   { text: "Home", link: "/" },
   {
@@ -10,20 +13,12 @@ const NAVITEMS = [
     scroll: "cursos",
     dropdown: [
       {
-        text: "Fundamentos do Tiro",
-        drop_link: "/cursos/fundamentos-tiro",
+        text: "Cursos de iniciação no tiro",
+        drop_link: "basic_course",
       },
       {
-        text: "Capacitação",
-        drop_link: "/cursos/capacitacao",
-      },
-      {
-        text: "Operador de Pistola",
-        drop_link: "/cursos/operador-pistola",
-      },
-      {
-        text: "Armamento e Tiro",
-        drop_link: "/cursos/armamento-e-tiro",
+        text: "Cursos de aprimoramento no tiro",
+        drop_link: "advanced_course",
       },
     ],
   },
