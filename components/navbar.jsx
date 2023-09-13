@@ -38,7 +38,7 @@ const Navbar = () => {
   }, [clientWindowHeight]);
   return (
     <nav
-      className={`bg-gradient-to-b from-neutral-700 to-neutral-900 p-4 top-0 w-full z-10`}
+      className={`bg-gradient-to-b from-neutral-700 to-neutral-900 p-4 top-0 sticky w-full z-10`}
       style={{
         padding: `${padding}px 0px`,
         boxShadow: `rgb( 0 0 0 / ${boxShadow}) 0px 0px 20px 6px`,
