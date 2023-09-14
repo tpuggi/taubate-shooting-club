@@ -4,15 +4,15 @@ import ChamadaCursos from "../components/chamada-cursos";
 import SociateComponent from "../components/sociate.jsx";
 
 export default function Sociate() {
-return (
+  return (
     <main className="bg-black">
-    <Navbar />
+      <Navbar />
 
-    <SociateComponent id="seja_socio" />
+      <SociateComponent id="seja_socio" />
 
-    <ChamadaCursos id="cursos" />
+      <ChamadaCursos id="cursos" />
 
-    <Footer />
+      <Footer />
     </main>
-);
+  );
 }
