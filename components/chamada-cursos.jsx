@@ -6,6 +6,8 @@ import Image from "next/image";
 import Link from "next/link";
 import slugify from "slugify";
 
+const CURSOS = ["fundamentos-do-tiro", "capacitacao", "atirador-esportivo"];
+
 const ChamadaCursos = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const totalSlides = coursesCarousel.length;
@@ -31,22 +33,21 @@ const ChamadaCursos = () => {
       className="flex justify-center items-center bg-red-800 bg-opacity-75"
       id="cursos"
     >
-      <div className="pt-10 text-center justify-center items-center text-white">
-        <h1 style={{ fontSize: "60px" }}>Conheça também nossos cursos!</h1>
-        <p style={{ fontSize: "25px" }} className="px-10 pb-5">
+      <div className="pt-10 text-center text-white w-[100%]">
+        <h1 className="text-[2em] md:text-[4em] montserrat_classic-font">Conheça também nossos cursos!</h1>
+        <p className="mx-10 mb-5 text-[1em] md:text-[1.5em] inter-font">
           A melhor estrutura com stand de tiros, cursos e treinamentos e toda
           assessoria para compra de produtos controlados do Brasil.
         </p>
-        <p style={{ fontSize: "35px" }}>AGENDE UMA VISITA AGORA MESMO!</p>
+        <p className="text-[1.75em] neue_montreal-font">AGENDE UMA VISITA AGORA MESMO!</p>
         <div className="flex justify-center py-4">
           <Image src={bullet} alt="bullet icon" className="w-[89px] h-[22px]" />
         </div>
         <div className="flex justify-center items-center py-4">
           <button
-            className="bg-[#BFAE95] text-center text-red-800 text-3xl pr-20 pl-20 pt-5 pb-5 font-extrabold hover:shadow-2xl"
+            className="bg-[#BFAE95] text-center bebas_neue-font text-red-800 text-3xl px-20 py-5 font-extrabold hover:shadow-2xl text-[3em]"
             style={{
               fontWeight: "bold",
-              fontSize: "22px",
               border: "2px solid black",
             }}
           >
@@ -67,18 +68,26 @@ const ChamadaCursos = () => {
                 className="flex-none w-1/3 transition-transform transform bg-black translate-x-0 duration-300 mx-5"
               >
                 <Link
-                  href={`/cursos/${slugify(image.fileName, {
-                    replacement: "-",
-                    lower: true,
-                    strict: true,
-                  })
-                    .replace("png", "")
-                    .replace("jpg", "")}`}
+                  href={
+                    `/${slugify(image.fileName, {
+                      replacement: "-",
+                      lower: true,
+                      strict: true,
+                    })
+                      .replace("png", "")
+                      .replace("jpg", "")}` in CURSOS
+                      ? "/basic_course"
+                      : "/advanced_course"
+                  }
                   className="rounded overflow-hidden shadow-lg flex flex-col justify-between h-full"
                 >
-                  <Image className="w-full" src={image.url} alt={image.fileName} />
+                  <Image
+                    className="w-full"
+                    src={image.url}
+                    alt={image.fileName}
+                  />
                   <div className="px-6 py-4 self-center">
-                    <div className="font-bold text-xl mb-2">
+                    <div className="font-bold text-xl mb-2 montserrat_classic-font">
                       {image.fileName
                         .replace(".png", "")
                         .replace(".jpg", "")
@@ -90,7 +99,7 @@ const ChamadaCursos = () => {
             ))}
           </div>
         </div>
-        <div className="justify-between flex px-10 z-0 text-[20px]">
+        <div className="justify-between flex mx-10 z-0 text-[20px]">
           <button
             onClick={prevSlide}
             className="bg-black hover:bg-[#BFAE95] text-white rounded px-4 py-2 left-0 transform -translate-y-1/2"
