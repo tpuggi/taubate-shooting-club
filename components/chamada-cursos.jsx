@@ -34,12 +34,16 @@ const ChamadaCursos = () => {
       id="cursos"
     >
       <div className="pt-10 text-center text-white w-[100%]">
-        <h1 className="text-[2em] md:text-[4em] montserrat_classic-font">Conheça também nossos cursos!</h1>
+        <h1 className="text-[2em] md:text-[4em] montserrat_classic-font">
+          Conheça também nossos cursos!
+        </h1>
         <p className="mx-10 mb-5 text-[1em] md:text-[1.5em] inter-font">
           A melhor estrutura com stand de tiros, cursos e treinamentos e toda
           assessoria para compra de produtos controlados do Brasil.
         </p>
-        <p className="text-[1.75em] neue_montreal-font">AGENDE UMA VISITA AGORA MESMO!</p>
+        <p className="text-[1.75em] neue_montreal-font">
+          AGENDE UMA VISITA AGORA MESMO!
+        </p>
         <div className="flex justify-center py-4">
           <Image src={bullet} alt="bullet icon" className="w-[89px] h-[22px]" />
         </div>
@@ -55,7 +59,7 @@ const ChamadaCursos = () => {
           </button>
         </div>
 
-        <div className="flex justify-center my-5 py-5 overflow-hidden bg-cover">
+        <div className="relative w-full overflow-hidden bg-cover my-10">
           <div
             className="flex ease-in-out transition-transform duration-300"
             style={{
@@ -65,7 +69,7 @@ const ChamadaCursos = () => {
             {coursesCarousel.map((image, index) => (
               <div
                 key={index}
-                className="flex-none w-1/3 transition-transform transform bg-black translate-x-0 duration-300 mx-5"
+                className="flex-none w-1/3 md:w-2/5 transition-transform transform bg-black translate-x-1/3 top-1/2 left-1/2 mx-5"
               >
                 <Link
                   href={
@@ -87,7 +91,7 @@ const ChamadaCursos = () => {
                     alt={image.fileName}
                   />
                   <div className="px-6 py-4 self-center">
-                    <div className="font-bold text-xl mb-2 montserrat_classic-font">
+                    <div className="font-bold text-[1em] mb-1 montserrat_classic-font">
                       {image.fileName
                         .replace(".png", "")
                         .replace(".jpg", "")
@@ -98,15 +102,6 @@ const ChamadaCursos = () => {
               </div>
             ))}
           </div>
-        </div>
-        <div className="justify-between flex mx-10 z-0 text-[20px]">
-          <button
-            onClick={prevSlide}
-            className="bg-black hover:bg-[#BFAE95] text-white rounded px-4 py-2 left-0 transform -translate-y-1/2"
-          >
-            &lt; {/* Ícone de seta para a esquerda */}
-          </button>
-
           <div className="indicators flex justify-center mt-3">
             {coursesCarousel.map((_, index) => (
               <span
@@ -118,10 +113,15 @@ const ChamadaCursos = () => {
               ></span>
             ))}
           </div>
-
+          <button
+            onClick={prevSlide}
+            className="bg-black hover:bg-[#BFAE95] text-white rounded px-4 py-2 left-2 transform -translate-y-1/2 absolute top-1/3 z-30 flex cursor-pointer group items-center justify-center"
+          >
+            &lt; {/* Ícone de seta para a esquerda */}
+          </button>
           <button
             onClick={nextSlide}
-            className="bg-black hover:bg-[#BFAE95] text-white rounded px-4 py-2 right-0 transform -translate-y-1/2"
+            className="bg-black hover:bg-[#BFAE95] text-white rounded px-4 py-2 right-2 transform -translate-y-1/2 absolute top-1/3 z-30 flex cursor-pointer group items-center justify-cente"
           >
             &gt; {/* Ícone de seta para a direita */}
           </button>
