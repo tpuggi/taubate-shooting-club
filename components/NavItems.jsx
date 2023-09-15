@@ -23,6 +23,7 @@ const NAVITEMS = [
   { text: "Seja Sócio", link: "/sejaSocio" },
   { text: "FAQ", link: "/faq" },
   { text: "Ranking", link: "/ranking" },
+  { text: "Calendário", link: "/calendar" },
   { text: "Campeonatos", link: "/campeonatos" },
 ];
 
@@ -34,14 +35,14 @@ function NavItems() {
   };
 
   return (
-    <div className="flex justify-around items-center space-x-4 w-full pl-3 text-white inter-font">
+    <div className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 mx-5 text-white inter-font">
       {NAVITEMS.map((navItem, idx) => {
         if (navItem.scroll) {
           if (navItem.dropdown) {
             return (
               <div key={idx}>
                 <ScrollLink
-                  className="text-center inline-flex items-center cursor-pointer hover:text-gray-400"
+                  className="pl-2 bg-gradient-to-l my-1 from-neutral-700 to-neutral-900 shadow-lg flex-col flex py-2 rounded md:bg-transparent md:p-0 md:inline-flex cursor-pointer hover:text-gray-400"
                   to={navItem.scroll}
                   spy={true}
                   smooth={true}
@@ -98,7 +99,7 @@ function NavItems() {
                 smooth={true}
                 offset={-50}
                 duration={500}
-                className="text-white hover:text-gray-400"
+                className="pl-2 bg-gradient-to-l my-1 from-neutral-700 to-neutral-900 shadow-lg flex-col flex py-2 rounded md:bg-transparent md:p-0 md:inline-flex cursor-pointer hover:text-gray-400"
                 href={navItem.link}
               >
                 {navItem.text}
@@ -109,7 +110,7 @@ function NavItems() {
           return (
             <Link
               key={idx}
-              className="text-center inline-flex items-center cursor-pointer hover:text-gray-400"
+              className="pl-2 my-1 bg-gradient-to-l from-neutral-700 to-neutral-900 shadow-lg flex-col flex py-2 rounded md:bg-transparent md:p-0 md:inline-flex cursor-pointer hover:text-gray-400"
               href={navItem.link}
               spy={true}
               smooth={true}
@@ -139,7 +140,7 @@ function NavItems() {
           return (
             <Link
               key={idx}
-              className="text-white hover:text-gray-400"
+              className="pl-2 my-1 bg-gradient-to-l from-neutral-700 to-neutral-900 shadow-lg flex-col flex py-2 rounded md:bg-transparent md:p-0 md:inline-flex cursor-pointer hover:text-gray-400"
               href={navItem.link}
             >
               {navItem.text}

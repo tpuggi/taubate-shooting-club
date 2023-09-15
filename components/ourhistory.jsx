@@ -5,10 +5,10 @@ const OurHistory = () => {
   return (
     <div className="mt-32">
       <div className="md:grid md:grid-cols-2 md:gap-8 gap-4 flex flex-wrap mx-10 my-4">
-        <div className="grid gap-2">
+        <div className="items-center flex gap-2">
           <Image src={clubePhoto} alt="foto do clube" />
         </div>
-        <div className="grid gap-2 bg-white p-14">
+        <div className="grid gap-2 bg-white p-5">
           <p className="text-black montserrat_classic-font text-5xl text-[3em]">
             Nossa História
           </p>
@@ -22,7 +22,7 @@ const OurHistory = () => {
       </div>
 
       <div className="md:grid md:grid-cols-2 md:gap-8 gap-4 flex flex-wrap-reverse mx-10 my-4">
-        <div className="grid gap-2 bg-gray-800 p-14">
+        <div className="grid gap-2 bg-gray-800 p-5">
           <p className="text-[3em] text-white montserrat_classic-font text-5xl">
             Missão
           </p>

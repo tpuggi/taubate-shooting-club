@@ -102,7 +102,7 @@ const Navbar = () => {
         </div>
       </div>
       {isOpen && (
-        <div className="md:hidden flex flex-col">
+        <div className="w-full md:hidden">
           <NavItems />
         </div>
       )}
