@@ -33,8 +33,8 @@ const CalendarPage = () => {
   }, []);
 
   return (
-    <div className="flex flex-wrap justify-center text-white m-10">
-      <h1 className="text-[4em]">Calendário</h1>
+    <div className="flex flex-wrap justify-center inter-font text-white m-10">
+      <h1 className="text-[4em] montserrat_classic-font">Calendário</h1>
       <div className="bg-gradient-to-b from-neutral-700 to-neutral-900 text-white h-full w-full">
         <FullCalendar
           plugins={[dayGridPlugin]}
