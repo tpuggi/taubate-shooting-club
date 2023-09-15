@@ -42,7 +42,7 @@ function NavItems() {
             return (
               <div key={idx}>
                 <ScrollLink
-                  className="pl-2 bg-gradient-to-l my-1 from-neutral-700 to-neutral-900 shadow-lg flex-col flex py-2 rounded md:bg-transparent md:p-0 md:inline-flex cursor-pointer hover:text-gray-400"
+                  className="pl-2 md:bg-none bg-gradient-to-l my-1 from-neutral-700 to-neutral-900 flex-row flex py-2 rounded md:bg-transparent md:p-0 md:inline-flex justify-start items-center cursor-pointer hover:text-gray-400"
                   to={navItem.scroll}
                   spy={true}
                   smooth={true}
@@ -99,7 +99,7 @@ function NavItems() {
                 smooth={true}
                 offset={-50}
                 duration={500}
-                className="pl-2 bg-gradient-to-l my-1 from-neutral-700 to-neutral-900 shadow-lg flex-col flex py-2 rounded md:bg-transparent md:p-0 md:inline-flex cursor-pointer hover:text-gray-400"
+                className="pl-2 md:bg-none bg-gradient-to-l my-1 from-neutral-700 to-neutral-900  flex-col flex py-2 rounded md:bg-transparent md:p-0 md:inline-flex cursor-pointer hover:text-gray-400"
                 href={navItem.link}
               >
                 {navItem.text}
@@ -110,7 +110,7 @@ function NavItems() {
           return (
             <Link
               key={idx}
-              className="pl-2 my-1 bg-gradient-to-l from-neutral-700 to-neutral-900 shadow-lg flex-col flex py-2 rounded md:bg-transparent md:p-0 md:inline-flex cursor-pointer hover:text-gray-400"
+              className="pl-2 my-1 md:bg-none bg-gradient-to-l from-neutral-700 to-neutral-900  flex-col flex py-2 rounded md:bg-transparent md:p-0 md:inline-flex cursor-pointer hover:text-gray-400"
               href={navItem.link}
               spy={true}
               smooth={true}
@@ -140,7 +140,7 @@ function NavItems() {
           return (
             <Link
               key={idx}
-              className="pl-2 my-1 bg-gradient-to-l from-neutral-700 to-neutral-900 shadow-lg flex-col flex py-2 rounded md:bg-transparent md:p-0 md:inline-flex cursor-pointer hover:text-gray-400"
+              className="pl-2 my-1 md:bg-none bg-gradient-to-l from-neutral-700 to-neutral-900  flex-col flex py-2 rounded md:bg-transparent md:p-0 md:inline-flex cursor-pointer hover:text-gray-400"
               href={navItem.link}
             >
               {navItem.text}
