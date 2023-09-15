@@ -17,7 +17,7 @@ const Carousel = () => {
 
   return (
     <div className="carousel mt-1">
-      <div className="flex justify-center mx-25 py-10 overflow-hidden bg-cover">
+      <div className="relative w-full overflow-hidden bg-cover opacity-90">
         <div
           className="flex transition-transform duration-300 ease-in-out"
           style={{ transform: `translateX(-${currentSlide * 100}%)` }}
