@@ -17,7 +17,7 @@ const AboutUs = () => {
               defesa ou melhorar habilidades técnicas.
             </p>
           </div>
-          <div className="text-[1.75em] px-2 md:px-10 pb-8">
+          <div className="text-[1.75em] px-2 md:px-10 pb-8 inter-font">
             <p>Aqui você encontra:</p>
             <ul>
               <li>• Treinamentos e competições </li>

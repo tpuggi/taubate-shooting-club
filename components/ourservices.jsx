@@ -2,192 +2,82 @@ import SomeImage from "../public/images/SomeImage.png";
 import clube from "../public/images/clube.jpg";
 
 import Image from "next/image";
-import Link from "next/link";
 
-import {} from "../context/context";
-
-const titleServices01 = [{ text: "Manutenção de Armamentos" }];
-const TexServices01 = [
+const SERVICES = [
   {
+    title: "Manutenção de Armamentos",
     text: "O TSC possui armeiro credenciado pela polícia federal capacitado para realizar manutenção preventiva ou corretiva do seu equipamento. Também realizamos customização do seu armamento. Pintura e gravação à Laser são nossas especialidades, pelo convênio com a Cammo Arts Custom.",
+    image: SomeImage,
+  },
+  {
+    title: "Despachantes Especializados",
+    text: "O TSC possui despachantes especializados. Com eles você não precisará se preocupar com a burocracia que envolve aquisição de arma de fogo, renovação de registro (SINARM e SIGMA) e emissão de Certificado de Registro (CR) de Atirador, Caçador ou Colecionador (CAC), Guias de Tráfego ou Porte de Arma de Fogo.",
+    image: SomeImage,
+  },
+  {
+    title: "Comprovante de capacidade técnica de arma de fogo",
+    text: "Possuímos despachantes especializados. Com eles você não precisará se preocupar com a burocracia que envolve aquisição de arma de fogo, renovação de registro (SINARM e SIGMA) e emissão de Certificado de Registro (CR) de Atirador, Caçador ou Colecionador (CAC), Guias de Tráfego ou Porte de Arma de Fogo.",
+    image: SomeImage,
+  },
+  {
+    title: "Treinamentos de alto nível",
+    text: "O uso eficiente de armas de fogo exige, basicamente, aprendizado contínuo e treinamento constante. Seja para a prática de esporte ou lazer, seja para defesa pessoal, no TSC você pode iniciar seu aprendizado e desenvolver suas habilidades com instrutores de alto nível. O TSC possui instalações modernas, únicas no Brasil, que utilizam a tecnologia da empresa americana Laser Shot Simulations, a mesma utilizada pela agência federal americana responsável pelo treinamento de todas as agências integrantes do Homeland Defense (CIA, FBI, NSA, CBP..).",
+    image: SomeImage,
+  },
+  {
+    title: "Competições",
+    text: "Realizamos regularmente competições de tiro em diversas modalidades. Treine conosco, participe e seja um atleta no ranking do IDSC, Tiro Tático Dinâmico (TTD), Tiro Rápido de Precisão, Shot Precision e IPSC. Com retorno dos níveis de atirador esportivo, o TSC sedia diversas competições de ambito nacional e internacional.",
+    image: SomeImage,
   },
 ];
-const imageServices01 = [{ src: SomeImage }];
-
-const titleServices02 = [{ text: "Manutenção de Armamentos" }];
-const TexServices02 = [
-  {
-    text: "O TSC possui armeiro credenciado pela polícia federal capacitado para realizar manutenção preventiva ou corretiva do seu equipamento. Também realizamos customização do seu armamento. Pintura e gravação à Laser são nossas especialidades, pelo convênio com a Cammo Arts Custom.",
-  },
-];
-const imageServices02 = [{ src: SomeImage }];
-
-const titleServices03 = [{ text: "Manutenção de Armamentos" }];
-const TexServices03 = [
-  {
-    text: "O TSC possui armeiro credenciado pela polícia federal capacitado para realizar manutenção preventiva ou corretiva do seu equipamento. Também realizamos customização do seu armamento. Pintura e gravação à Laser são nossas especialidades, pelo convênio com a Cammo Arts Custom.",
-  },
-];
-const imageServices03 = [{ src: SomeImage }];
-
-const titleServices04 = [{ text: "Manutenção de Armamentos" }];
-const TexServices04 = [
-  {
-    text: "O TSC possui armeiro credenciado pela polícia federal capacitado para realizar manutenção preventiva ou corretiva do seu equipamento. Também realizamos customização do seu armamento. Pintura e gravação à Laser são nossas especialidades, pelo convênio com a Cammo Arts Custom.",
-  },
-];
-const imageServices04 = [{ src: SomeImage }];
-
-const titleServices05 = [{ text: "Manutenção de Armamentos" }];
-const TexServices05 = [
-  {
-    text: "O TSC possui armeiro credenciado pela polícia federal capacitado para realizar manutenção preventiva ou corretiva do seu equipamento. Também realizamos customização do seu armamento. Pintura e gravação à Laser são nossas especialidades, pelo convênio com a Cammo Arts Custom.",
-  },
-];
-const imageServices05 = [{ src: SomeImage }];
 
 const OurServices = () => {
   return (
-    <div className="text-white mt-32" id="servicos">
+    <div className="text-white mt-30" id="servicos">
       <p className="text-[80px] neue_montreal-font pl-10">Nossos Serviços</p>
-      <p className="text-[25px] pl-10 pt-5">
+      <p className="text-[25px] pl-10 pt-5 inter-font">
         Realizamos diversos <strong>cursos de capacitação</strong> com convênio
-        para aplicar os testes exigidos para a{" "}
-        <strong>aquisição</strong> de armas de fogo, <strong>renovação</strong>{" "}
-        de registros ou <strong>expedição</strong> de Certificado de
-        Registro de CAC (Colecionador - Atirador ou  Caçador).
+        para aplicar os testes exigidos para a <strong>aquisição</strong> de
+        armas de fogo, <strong>renovação</strong> de registros ou{" "}
+        <strong>expedição</strong> de Certificado de Registro de CAC
+        (Colecionador - Atirador ou Caçador).
       </p>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-3 pb-20">
-        <div className="mr-2 pl-10 pt-10 pr-10">
-          {imageServices01.map((imageServices01, idx) => (
-            <Image
-              key={idx}
-              alt="imagem 1"
-              src={imageServices01.src}
-              className="w-full h-full mr-2"
-            />
-          ))}
-        </div>
-        <div className="ml-2 pr-10 pt-10 pl-10">
-          <div className="origin-top-left bg-gradient-to-b from-zinc-800 to-neutral-900 rounded-tl-[10px] rounded-tr-[10px] pl-3 pt-3 pb-3">
-            {titleServices01.map((titleServices01, idx) => (
-              <p className="text-[32px]" key={idx}>
-                {titleServices01.text}
-              </p>
-            ))}
+      <div className="grid grid-cols-1 sm:grid-rows-n md:grid-rows-n lg:grid-rows-n xl:grid-rows-n gap-3 pb-10">
+        {SERVICES.map((service, index) => (
+          <div
+            key={index}
+            className="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-3"
+          >
+            {index % 2 == 0 ? (
+              <div className="mx-5 my-10">
+                <Image
+                  alt={service.title}
+                  src={service.image}
+                  className="w-full h-full"
+                />
+              </div>
+            ) : null}
+
+            <div className="mx-6 my-10 bg-neutral-900">
+              <div className="origin-top-left bg-gradient-to-b from-zinc-800 to-neutral-900 rounded-tl-[10px] rounded-tr-[10px] p-3">
+                <p className="text-[2.3em]">{service.title}</p>
+              </div>
+              <div className="origin-top-left mt-1 p-10">
+                <p className="text-[1.75em]">{service.text}</p>
+              </div>
+            </div>
+
+            {index % 2 == 1 ? (
+              <div className="mx-5 py-10">
+                <Image
+                  alt={service.title}
+                  src={service.image}
+                  className="w-full h-full "
+                />
+              </div>
+            ) : null}
           </div>
-          <div className="origin-top-left bg-neutral-900 mt-1 p-10 pb-28">
-            {TexServices01.map((TexServices01, idx) => (
-              <p className="text-[22px]" key={idx}>
-                {TexServices01.text}
-              </p>
-            ))}
-          </div>
-        </div>
-        <div className="ml-2 pl-10 pt-10 pr-10">
-          <div className="origin-top-left bg-gradient-to-b from-zinc-800 to-neutral-900 rounded-tl-[10px] rounded-tr-[10px] pl-3 pt-3 pb-3">
-            {titleServices02.map((titleServices02, idx) => (
-              <p className="text-[32px]" key={idx}>
-                {titleServices02.text}
-              </p>
-            ))}
-          </div>
-          <div className="origin-top-left bg-neutral-900 mt-1 p-10 pb-28">
-            {TexServices02.map((TexServices02, idx) => (
-              <p className="text-[22px]" key={idx}>
-                {TexServices02.text}
-              </p>
-            ))}
-          </div>
-        </div>
-        <div className="mr-2 pr-10 pt-10 pl-10">
-          {imageServices02.map((imageServices02, idx) => (
-            <Image
-              key={idx}
-              alt="imagem 2"
-              src={imageServices02.src}
-              className="w-full h-full mr-2"
-            />
-          ))}
-        </div>
-        <div className="mr-2 pl-10 pt-10 pr-10">
-          {imageServices03.map((imageServices03, idx) => (
-            <Image
-              key={idx}
-              alt="imagem 3"
-              src={imageServices03.src}
-              className="w-full h-full mr-2"
-            />
-          ))}
-        </div>
-        <div className="ml-2 pr-10 pt-10 pl-10">
-          <div className="origin-top-left bg-gradient-to-b from-zinc-800 to-neutral-900 rounded-tl-[10px] rounded-tr-[10px] pl-3 pt-3 pb-3">
-            {titleServices03.map((titleServices03, idx) => (
-              <p className="text-[32px]" key={idx}>
-                {titleServices03.text}
-              </p>
-            ))}
-          </div>
-          <div className="origin-top-left bg-neutral-900 mt-1 p-10 pb-28">
-            {TexServices03.map((TexServices03, idx) => (
-              <p className="text-[22px]" key={idx}>
-                {TexServices03.text}
-              </p>
-            ))}
-          </div>
-        </div>
-        <div className="ml-2 pl-10 pt-10 pr-10">
-          <div className="origin-top-left bg-gradient-to-b from-zinc-800 to-neutral-900 rounded-tl-[10px] rounded-tr-[10px] pl-3 pt-3 pb-3">
-            {titleServices04.map((titleServices04, idx) => (
-              <p className="text-[32px]" key={idx}>
-                {titleServices04.text}
-              </p>
-            ))}
-          </div>
-          <div className="origin-top-left bg-neutral-900 mt-1 p-10 pb-28">
-            {TexServices04.map((TexServices04, idx) => (
-              <p className="text-[22px]" key={idx}>
-                {TexServices04.text}
-              </p>
-            ))}
-          </div>
-        </div>
-        <div className="mr-2 pr-10 pt-10 pl-10">
-          {imageServices04.map((imageServices04, idx) => (
-            <Image
-              key={idx}
-              alt="imagem 4"
-              src={imageServices04.src}
-              className="w-full h-full mr-2"
-            />
-          ))}
-        </div>
-        <div className="mr-2 pl-10 pt-10 pr-10">
-          {imageServices05.map((imageServices05, idx) => (
-            <Image
-              key={idx}
-              alt="imagem 5"
-              src={imageServices05.src}
-              className="w-full h-full mr-2"
-            />
-          ))}
-        </div>
-        <div className="ml-2 pr-10 pt-10 pl-10">
-          <div className="origin-top-left bg-gradient-to-b from-zinc-800 to-neutral-900 rounded-tl-[10px] rounded-tr-[10px] pl-3 pt-3 pb-3">
-            {titleServices05.map((titleServices05, idx) => (
-              <p className="text-[32px]" key={idx}>
-                {titleServices05.text}
-              </p>
-            ))}
-          </div>
-          <div className="origin-top-left bg-neutral-900 mt-1 p-10 pb-28">
-            {TexServices05.map((TexServices05, idx) => (
-              <p className="text-[22px]" key={idx}>
-                {TexServices05.text}
-              </p>
-            ))}
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );

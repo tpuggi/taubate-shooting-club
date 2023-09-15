@@ -2,9 +2,6 @@ import Link from "next/link";
 import { Link as ScrollLink } from "react-scroll";
 import { useState } from "react";
 
-
-
-
 const NAVITEMS = [
   { text: "Home", link: "/" },
   {
@@ -23,8 +20,9 @@ const NAVITEMS = [
     ],
   },
   { text: "Contato", link: "/contatos" },
-  { text: "FAQ", link: "/faq" },
   { text: "Seja Sócio", link: "/sejaSocio" },
+  { text: "FAQ", link: "/faq" },
+  { text: "Ranking", link: "/ranking" },
   { text: "Campeonatos", link: "/campeonatos" },
 ];
 
@@ -36,7 +34,7 @@ function NavItems() {
   };
 
   return (
-    <div className="flex justify-around items-center space-x-4 w-full pl-3 text-white">
+    <div className="flex justify-around items-center space-x-4 w-full pl-3 text-white inter-font">
       {NAVITEMS.map((navItem, idx) => {
         if (navItem.scroll) {
           if (navItem.dropdown) {

@@ -16,18 +16,18 @@ const Carousel = () => {
   });
 
   return (
-    <div className="carousel mt-16">
+    <div className="carousel mt-1">
       <div className="flex justify-center mx-25 py-10 overflow-hidden bg-cover">
         <div
           className="flex transition-transform duration-300 ease-in-out"
           style={{ transform: `translateX(-${currentSlide * 100}%)` }}
         >
           {bigCarouselImages.map((image, index) => (
-            <div key={index} className="w-full flex-shrink-0 h-[75vh]">
+            <div key={index} className="w-full flex-shrink-0 h-[75vh] ">
               <Image
                 src={image.url}
                 alt={`Image ${image.filename}`}
-                className={`w-full h-[75vh] object-cover ${
+                className={`w-full h-[75vh] object-cover  ${
                   index === currentSlide ? "opacity-100" : "opacity-0"
                 }`}
               />

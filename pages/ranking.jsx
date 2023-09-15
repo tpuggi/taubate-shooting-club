@@ -78,7 +78,7 @@ export default function Ranking() {
           placeholder="Filtrar"
           value={filterText}
           onChange={(e) => setFilterText(e.target.value)}
-          className="p-2 border rounded-md mb-4 text-black"
+          className="p-2 border rounded-md mb-4 text-black "
         />
 
         <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
