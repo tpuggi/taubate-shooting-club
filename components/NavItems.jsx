@@ -78,7 +78,7 @@ function NavItems() {
                           <li key={idx2} className="pb-1">
                             <Link
                               href={subItem.drop_link}
-                              className=" hover:text-gray-400"
+                              className="hover:text-gray-400"
                             >
                               {subItem.text}
                             </Link>
