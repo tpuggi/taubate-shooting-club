@@ -82,7 +82,7 @@ export default function Ranking() {
         />
 
         <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
-          <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+          <table className="w-full text-sm text-left text-gray-500 ">
             <thead className="text-xs text-white uppercase bg-gradient-to-l from-neutral-700 to-neutral-900">
               <tr>
                 {RANKINGHEAD.map((item, idx) => (
