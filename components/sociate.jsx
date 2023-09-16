@@ -34,8 +34,8 @@ const titleContact = [
 
 function sociate() {
   return (
-    <div className="">
-      <div className="text-white">
+    <div>
+      <div className="text-white" data-aos="fade-down">
         <h1 className="pt-32 text-[50px] text-center bebas_neue-font">
           SEJA SÓCIO DO TAUBATÉ SHOOTING CLUB
         </h1>
@@ -45,7 +45,7 @@ function sociate() {
         </h3>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-3 pb-20 pt-10">
-        <div className="pl-14">
+        <div className="pl-14" data-aos="fade-right">
           <div className="pb-4">
             <Image src={arma} alt="foto da arma" />
           </div>
@@ -65,7 +65,7 @@ function sociate() {
             </p>
           </div>
         </div>
-        <div>
+        <div data-aos="fade-left">
           <div className="ml-2 pl-8 pr-10">
             <div className="origin-top-left bg-gradient-to-b from-zinc-800 to-neutral-900 rounded-tl-[10px] rounded-tr-[10px] pl-3 pt-3 text-white">
               <p className="text-[32px] bebas_neue-font text-center">
@@ -109,7 +109,6 @@ function sociate() {
           </div>
         </div>
       </div>
-      <div className="text-white pl-12 pr-12 items-center text-center grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-9 pb-20"></div>
       <div className="text-white pl-12 pr-12 items-center text-center grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-9 pb-20">
         <div data-aos="fade-right">
           <div className="origin-top-left bg-gradient-to-b from-red-800 to-neutral-900 rounded-tl-[10px] rounded-tr-[10px] pl-3 pt-3 pb-3 text-white">
@@ -195,7 +194,11 @@ function sociate() {
       </div>
       <div className="text-white text-center">
         <div className="ml-20 mr-20">
-          <p className="text-[38px] montserrat-font">{titleContact.title}</p>
+          {titleContact.map((titleContact, idx) => (
+            <p className="text-[38px] montserrat-font" key={idx}>
+              {titleContact.title}
+            </p>
+          ))}
         </div>
         <div className="pt-20 pb-10 flex justify-around items-center space-x-4 w-full pl-3">
           {CONTATOS.map((contato, idx) => (

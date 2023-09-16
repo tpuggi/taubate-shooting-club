@@ -16,7 +16,7 @@ const Carousel = () => {
   });
 
   return (
-    <div className="carousel mt-1">
+    <div className="carousel mt-1" data-aos="zoom-out">
       <div className="relative w-full overflow-hidden bg-cover opacity-90">
         <div
           className="flex transition-transform duration-300 ease-in-out"
