@@ -1,24 +1,35 @@
 import React from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { useState } from "react";
 
 const CURSOS = [
-  { text: "Fundamentos do Tiro", link: "/cursos/fundamentos-do-tiro" },
-  { text: "Capacitação", link: "/cursos/capacitacao" },
-  { text: "Armamento e Tiro", link: "/cursos/armamento-e-tiro" },
-  { text: "Operador de Pistola", link: "/cursos/operador-pistola" },
-  { text: "Atirador Esportivo", link: "/cursos/atirador-esportivo" },
-  { text: "Tiro Tático Defensivo", link: "/cursos/tiro-tatico-defensivo" },
+  { text: "Capacitação", link: "/capacitacao_course" },
+  { text: "Fundamentos do Tiro", link: "/basic_course" },
+  { text: "Atirador Esportivo", link: "/basic_course" },
+  { text: "Home Defense", link: "/basic_course" },
+  { text: "Tiro Tático Defensivo", link: "/advanced_course" },
+  { text: "Armamento e Tiro", link: "/advanced_course" },
+  { text: "Operador de Pistola", link: "/advanced_course" },
+  { text: "Operador de Fuzil", link: "/advanced_course" },
+  { text: "Operador de Espingarda", link: "/advanced_course" },
+  { text: "Operador de Duas Armas", link: "/advanced_course" },
 ];
 
 const INFORMAÇÕES = [
-  { text: "Sobre Nós", link: "" },
-  { text: "Instrutores", link: "link2" },
   { text: "Contato", link: "/contato" },
+  { text: "Campeonatos", link: "/campeonatos" },
+  { text: "Calendário", link: "/calendar" },
+  { text: "Ranking", link: "/ranking" },
 ];
 
 const AJUDA = [
-  { text: "Regimento Interno", link: "link" },
+  {
+    text: "Regimento Interno",
+    link: "/contexts/regimento-interno/regimento-interno.pdf",
+  },
   { text: "FAQ", link: "/faq" },
-  { text: "O que é ser sócio", link: "/seja-socio" },
+  { text: "O que é ser sócio", link: "/sejaSocio" },
 ];
 
 import { socialIcons } from "../context/context";
@@ -45,9 +56,6 @@ const CONTATOS = [
     link: "https://wa.me/12997359612?text=Oi",
   },
 ];
-import Link from "next/link";
-import Image from "next/image";
-import { useState } from "react";
 
 const Footer = () => {
   const [message, setMessage] = useState("");
@@ -101,9 +109,12 @@ const Footer = () => {
                   </Link>
                 ))}
               </div>
-              <div className="mt-5 text-[20px] font-bold text-white-400 hover:text-white-200">
+              <Link
+                href="/"
+                className="mt-5 text-[20px] font-bold text-white-400 hover:text-white-200"
+              >
                 Nossos Serviços
-              </div>
+              </Link>
             </div>
           </div>
           <div className="md:grid md:grid-cols-2 flex flex-wrap gap-2 pt-10 pb-5">

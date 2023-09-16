@@ -17,6 +17,10 @@ const NAVITEMS = [
         text: "Cursos de aprimoramento no tiro",
         drop_link: "advanced_course",
       },
+      {
+        text: "Curso de Capacitação",
+        drop_link: "capacitacao_course",
+      },
     ],
   },
   { text: "Contato", link: "/contatos" },
