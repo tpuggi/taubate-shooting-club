@@ -45,7 +45,7 @@ function sociate() {
         </h3>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-3 pb-20 pt-10">
-        <div className="pl-14" data-aos="fade-right">
+        <div className="pl-14" data-aos="fade-down">
           <div className="pb-4">
             <Image src={arma} alt="foto da arma" />
           </div>
@@ -65,7 +65,7 @@ function sociate() {
             </p>
           </div>
         </div>
-        <div data-aos="fade-left">
+        <div data-aos="fade-down" className="max-h-[100%] overflow-hidden">
           <div className="ml-2 pl-8 pr-10">
             <div className="origin-top-left bg-gradient-to-b from-zinc-800 to-neutral-900 rounded-tl-[10px] rounded-tr-[10px] pl-3 pt-3 text-white">
               <p className="text-[32px] bebas_neue-font text-center">
@@ -110,7 +110,7 @@ function sociate() {
         </div>
       </div>
       <div className="text-white pl-12 pr-12 items-center text-center grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-9 pb-20">
-        <div data-aos="fade-right">
+        <div data-aos="fade-down">
           <div className="origin-top-left bg-gradient-to-b from-red-800 to-neutral-900 rounded-tl-[10px] rounded-tr-[10px] pl-3 pt-3 pb-3 text-white">
             <p className="text-[32px] bebas_neue-font text-center">Plano 01:</p>
           </div>
@@ -164,7 +164,7 @@ function sociate() {
             </div>
           </div>
         </div>
-        <div data-aos="fade-left">
+        <div data-aos="fade-down" className="max-h-[100%] overflow-hidden">
           <div className="origin-top-left bg-gradient-to-b from-red-800 to-neutral-900 rounded-tl-[10px] rounded-tr-[10px] pl-3 pt-3 pb-3 text-white">
             <p className="text-[32px] bebas_neue-font text-center">Plano 03:</p>
           </div>
