@@ -109,9 +109,9 @@ function Championchips() {
       <div className="text-white">
         <div className="grid grid-cols-2 gap-3 pb-20 m-10">
           {CAMPEONATOS.map((campeonato, idx) => (
-            <div className="mr-1 pl-10 pt-10  bg-red-800">
+            <div className="mr-1 pl-10 pt-10  bg-red-800" key={idx}>
               <div>
-                <p className="text-[32px] pb-6 bebas_neue-font" key={idx}>
+                <p className="text-[32px] pb-6 bebas_neue-font">
                   {campeonato.title}
                 </p>
               </div>
@@ -165,7 +165,7 @@ function Championchips() {
       </div>
       <div className="pt-20 pb-10 flex justify-around items-center space-x-4 w-full pl-3">
         {CONTATOS.map((contato, idx) => (
-          <Link href={contato.link} className="flex items-center">
+          <Link href={contato.link} className="flex items-center" key={idx}>
             <Image
               src={contato.src}
               alt={contato.text + "ícone"}
