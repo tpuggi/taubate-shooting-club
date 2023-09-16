@@ -67,8 +67,7 @@ const FAQ = [
   },
   {
     pergunta: "O TSC aceita reservas?",
-    resposta:
-      "Sim, mas somente sócios possam efetuar reservas.",
+    resposta: "Sim, mas somente sócios possam efetuar reservas.",
   },
   {
     pergunta: "O TSC permite o uso do clube para grupos em eventos?",
@@ -112,6 +111,8 @@ const Faq = () => {
             className="bg-gradient-to-b from-neutral-700 to-neutral-900 p-4"
             key={index}
             onClick={() => toggleDropdown(index)}
+            data-aos="fade-up"
+            data-aos-delay={400 + 50 * (index % 9)}
           >
             <p className="text-[25px] text-white inter-font flex items-center text-4xl">
               {item.pergunta}{" "}

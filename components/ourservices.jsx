@@ -33,7 +33,7 @@ const SERVICES = [
 
 const OurServices = () => {
   return (
-    <div className="text-white mt-30" id="servicos">
+    <div className="text-white mt-30" id="servicos" data-aos="fade-up">
       <p className="text-[80px] neue_montreal-font pl-10">Nossos Serviços</p>
       <p className="text-[25px] pl-10 pt-5 inter-font">
         Realizamos diversos <strong>cursos de capacitação</strong> com convênio
@@ -47,6 +47,7 @@ const OurServices = () => {
           <div
             key={index}
             className="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-3"
+            data-aos={index % 2 == 0 ? "fade-right" : "fade-left"}
           >
             {index % 2 == 0 ? (
               <div className="mx-5 my-10">
