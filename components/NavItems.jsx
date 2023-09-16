@@ -29,6 +29,8 @@ const NAVITEMS = [
   { text: "Ranking", link: "/ranking" },
   { text: "Calendário", link: "/calendar" },
   { text: "Campeonatos", link: "/campeonatos" },
+  { text: "Ranking", link: "/campeonatos" },
+
 ];
 
 function NavItems() {
