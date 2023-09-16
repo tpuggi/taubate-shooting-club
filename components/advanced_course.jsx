@@ -79,16 +79,16 @@ function ACourse() {
     <div className="text-white mt-28">
       <div className="ml-20 mr-20">
         <p className="text-[90px] text-center bebas_neue-font">
-          Curso de Aprimoramento no Tiro
+          Cursos de Aprimoramento no Tiro
         </p>
       </div>
       <div className="grid grid-cols-2 gap-3">
-        <div className="h-auto max-h-[20rem] w-auto flex items-center m-12 bg-white border border-gray-200 rounded-lg shadow  bg-gradient-to-b from-neutral-700 to-neutral-900">
+        <div className="h-auto max-h-[20rem] w-auto flex items-center m-12 border border-gray-700 rounded-lg shadow  bg-gradient-to-b from-neutral-700 to-neutral-900">
           <div className="origin-top-left px-4">
             <p className="text-[32px] montserrat-font">Conteudo:</p>
             <p className="text-[24px] inter-font">
-              O curso de aprimoramento no tiro é o indicado para os que desejam
-              melhorar no tiro esportivo ou de defesa, é uma experiência
+              Os cursos de aprimoramento no tiro são indicados para os que
+              desejam melhorar no tiro esportivo ou de defesa, é uma experiência
               fundamental para habilitar ou capacitar o uso mais assertivo de
               armas de fogo
             </p>
@@ -99,9 +99,7 @@ function ACourse() {
         </div>
       </div>
       <div className="ml-20 mr-20">
-        <p className="text-[80px] bebas_neue-font">
-          Cursos presentes na Iniciação do Tiro:
-        </p>
+        <p className="text-[80px] bebas_neue-font">Cursos presentes:</p>
       </div>
       <div className="md:grid md:grid-cols-2 flex flex-wrap gap-3 m-10">
         {COURSES.map((curso, index) => (

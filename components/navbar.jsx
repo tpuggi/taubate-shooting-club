@@ -61,7 +61,7 @@ const Navbar = () => {
             <div className="p-3 hidden md:block">
               <hr className="px-20" />
             </div>
-            <div className="hidden md:flex space-x-4">
+            <div className="hidden md:flex md:justify-around space-x-4">
               <NavItems />
             </div>
             <div className="md:hidden self-end mr-10">

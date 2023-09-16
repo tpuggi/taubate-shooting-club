@@ -67,7 +67,7 @@ function Course() {
     <div className="text-white mt-28">
       <div className="ml-20 mr-20">
         <p className="text-[90px] text-center bebas_neue-font">
-          Curso de Iniciação no Tiro
+          Cursos de Iniciação no Tiro
         </p>
       </div>
       <div className="grid grid-cols-2 gap-3">
@@ -75,7 +75,7 @@ function Course() {
           <div className="origin-top-left px-4">
             <p className="text-[32px] montserrat-font">Conteudo:</p>
             <p className="text-[24px] inter-font">
-              O curso de iniciação no tiro é o indicado para os que desejam
+              Os cursos de iniciação no tiro são indicados para os que desejam
               iniciar no tiro esportivo ou de defesa, é uma experiência
               fundamental para habilitar ou capacitar ao uso de armas de fogo.
             </p>
@@ -86,9 +86,7 @@ function Course() {
         </div>
       </div>
       <div className="ml-20 mr-20">
-        <p className="text-[80px] bebas_neue-font">
-          Cursos presentes na Iniciação do Tiro:
-        </p>
+        <p className="text-[80px] bebas_neue-font">Cursos presentes:</p>
       </div>
       <div className="md:grid md:grid-cols-2 flex flex-wrap gap-3 m-10">
         {COURSES.map((curso, index) => (
