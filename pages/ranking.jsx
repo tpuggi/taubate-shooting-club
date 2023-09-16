@@ -68,11 +68,14 @@ export default function Ranking() {
   return (
     <main className="bg-black text-white">
       <Navbar />
-      <div className="h-[8em] mt-10 bg-red-800 items-center flex justify-center bg-center bg-blend-multiply bg-opacity-40 bg-[url('/images/clube.jpg')]">
+      <div
+        className="h-[8em] mt-10 bg-red-800 items-center flex justify-center bg-center bg-blend-multiply bg-opacity-40 bg-[url('/images/clube.jpg')]"
+        data-aos="flip-left"
+      >
         <h1 className="text-2xl font-bold mb-4 text-[2em]">Ranking</h1>
       </div>
 
-      <div className="p-4">
+      <div className="p-4" data-aos="fade-up">
         <input
           type="text"
           placeholder="Filtrar"

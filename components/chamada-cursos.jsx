@@ -15,7 +15,7 @@ const ChamadaCursos = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prevSlide) => (prevSlide + 1) % totalSlides);
-    }, 5000);
+    }, 1000);
 
     return () => clearInterval(interval);
   });
@@ -32,6 +32,7 @@ const ChamadaCursos = () => {
     <div
       className="flex justify-center items-center bg-red-800 bg-opacity-75"
       id="cursos"
+      data-aos="fade-up"
     >
       <div className="pt-10 text-center text-white w-[100%]">
         <h1 className="text-[2em] md:text-[4em] montserrat_classic-font">

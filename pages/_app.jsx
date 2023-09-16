@@ -1,9 +1,19 @@
 import "../styles/globals.css";
+import "aos/dist/aos.css";
 import Head from "next/head";
-
+import { useEffect } from "react";
+import AOS from "aos";
 import { useRouter } from "next/router";
+
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      offset: 100,
+    });
+  }, []);
   return (
     <div>
       <Head>
