@@ -37,7 +37,7 @@ const titleContact = [
 
 const COURSES = [
   {
-    src: campsImages[0].url,
+    src: campsImages[1].url,
     title: "Fundamentos no tiro",
     text: "O curso de fundamentos do tiro é o indicado para os que desejam iniciar no tiro esportivo ou de defesa, é uma experiência fundamental para habilitar ou capacitar ao uso de armas de fogo.",
     detail: ["Revólver", "Pistola", "Carabina"],
@@ -45,19 +45,19 @@ const COURSES = [
   {
     src: campsImages[1].url,
     title: "Curso de capacitação",
-    text: "O curso tem como prioridade qualificar o aluno para a prova de capacidade técnica aplicada por Instrutor de Armamento e Tiro da Polícia Federal (IAT/PF), sendo fundamental para a aquisição de armas pelo SINARM (PF) ou SIGMA (EB), renovação de registro de armas de fogo ou expedição de Certificado de Registro (CR) de Colecionador, Caçador ou Atirador (CAC).",
+    text: "O curso tem como prioridade qualificar o aluno para a prova de capacidade técnica aplicada por Instrutor de Armamento e Tiro da Polícia Federal (IAT/PF).",
     detail: ["2 horas", "60 disparos", ""],
   },
   {
     src: campsImages[1].url,
     title: "Curso de Atirador Esportivo",
-    text: "O curso tem como prioridade, capacitar atiradores iniciantes para a prática do Tiro Defensivo (IDSC) ou Tiro Tático Dinâmico (TTD) em relação às técnicas do esporte e auxiliá-lo no seu desenvolvimento, corrigindo seus erros.",
+    text: "O curso tem como prioridade, capacitar atiradores iniciantes para a prática do Tiro Defensivo (IDSC) ou Tiro Tático Dinâmico (TTD).",
     detail: ["1 dia", "Teoria e Prática", ""],
   },
   {
-    src: campsImages[0].url,
+    src: campsImages[1].url,
     title: "Torneio Buscapé",
-    text: "Carabina é uma arma de fogo mais curta que o fuzil, tendo entre 1,0 e 1,2 metro de comprimento muito usada em <strong>caça</strong> e tiro desportivo podendo ser de diversos calibres. Antigamente, designava uma versão mais curta do <strong>fuzil de infantaria</strong> a ser empregada por tropas de cavalaria.",
+    text: "Carabina é uma arma de fogo mais curta que o fuzil, tendo entre 1,0 e 1,2 metro de comprimento muito usada em caça e tiro desportivo podendo ser de diversos calibres.",
     detail: ["", "", ""],
   },
 ];
@@ -97,7 +97,7 @@ function Course() {
             <div className="pb-2">
               <p className="text-[32px] bebas_neue-font">{curso.title}</p>
             </div>
-            <div className="flex flex-row justify-between gap-3 m-2">
+            <div className="grid grid-cols-2 gap-3 m-2">
               <Image
                 src={curso.src}
                 className="h-full self-center"
@@ -112,10 +112,19 @@ function Course() {
                     key={idx}
                     className="bebas_neue-font flex items-center pl-4 text-[1em] py-2"
                   >
-                    <Image src={bullet} alt="bullet icon" className="w-16" />
-                    <p className="py-1">{det}</p>
                   </div>
                 ))}
+                <button
+                  className="bg-red-800 shadow border border-black border-opacity-20 text-center text-xl py-2 px-8 font-extrabold hover:shadow-2xl mt-8 mx-auto ml-20"
+                  style={{
+                    fontWeight: "bold",
+                    fontSize: "20px",
+                    border: "2px solid white",
+                    fontFamily: "neue_montreal",
+                  }}
+                >
+                  SAIBA MAIS
+                </button>
               </div>
             </div>
           </div>
