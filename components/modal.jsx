@@ -7,7 +7,7 @@ const Modal = ({ isOpen, onRequestClose, children }) => {
       onRequestClose={onRequestClose}
       contentLabel="Modal"
       overlayClassName="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50 "
-      className="p-4 bg-white rounded-lg shadow-md"
+      className="p-4 bg-neutral-700 text-white rounded-lg shadow-md w-[75%]"
     >
       {children}
     </ReactModal>

@@ -91,38 +91,26 @@ const COURSES = [
         {
           title: "Objetivo: ",
           text: (
-            <div>
-              <p>
-                O curso tem como prioridade, capacitar atiradores iniciantes
-                para a prática do Tiro Defensivo (IDSC) ou Tiro Tático Dinâmico
-                (TTD) em relação às técnicas do esporte e auxiliá-lo no seu
-                desenvolvimento, corrigindo seus erros.
-              </p>
-
-              <p>
-                Tanto para iniciantes como para os já praticantes dessas
-                modalidades de Tiro Esportivo, aperfeiçoe sua técnica e
-                conhecimentos para melhorar sua PRECISÃO e VELOCIDADE
-              </p>
-            </div>
+            <p>
+              Tanto para iniciantes como para os já praticantes dessas
+              modalidades de Tiro Esportivo, aperfeiçoe sua técnica e
+              conhecimentos para melhorar sua PRECISÃO e VELOCIDADE
+            </p>
           ),
         },
         {
           title: "Conteúdo: (teórico e prático)",
           text: (
             <ul>
-              <li> Regras</li>
-              <li> Técnicas de Visada e Transição de Alvos</li>
-              <li> Precisão</li>
-              <li> Cadência</li>
-              <li> Movimento de Alvo a Alvo</li>
-              <li> Deslocamento Lateral e Frontal</li>
-              <li> Entrada e Saída de Posto</li>
-              <li> Recarga</li>
-              <li> Tiro Barricado</li>
-              <li> Dúvidas Sobre Regulamentos</li>
-              <li> Segurança</li>
-              <li> Execução de Pistas</li>
+              <li> - Regras</li>
+              <li> - Técnicas de Visada e Transição de Alvos</li>
+              <li> - Precisão, Cadência e Segurança</li>
+              <li> - Movimento de Alvo a Alvo</li>
+              <li> - Deslocamento Lateral e Frontal</li>
+              <li> - Entrada e Saída de Posto</li>
+              <li> - Recarga e Tiro Barricado</li>
+              <li> - Dúvidas Sobre Regulamentos</li>
+              <li> - Execução de Pistas</li>
             </ul>
           ),
         },
@@ -140,11 +128,29 @@ const COURSES = [
   },
   {
     src: campsImages[1].url,
-    title: "Torneio Buscapé",
-    text: "Carabina é uma arma de fogo mais curta que o fuzil, tendo entre 1,0 e 1,2 metro de comprimento muito usada em caça e tiro desportivo podendo ser de diversos calibres.",
+    title: "Home Defense",
+    text: "Além de preparação para enfrentar eventos naturais, visa capacitar o proprietário de armas de fogo para sua utilização para defesa pessoal (personal protection) e para a defesa residencial (home defense) contra ameaças humanas.",
     modal: {
-      text: ""
-    }
+      text: "Duração: Um dia de curso",
+      detail: [
+        {
+          title: "Conteúdo: ",
+          text: (
+            <ul>
+              <li>- Eventos da natureza: preparação e reação humana</li>
+              <li>- Princípios da autodefesa</li>
+              <li>- Vigilância eletrônica</li>
+              <li>- Dinâmica das ocorrências mais comuns</li>
+              <li>
+                - Fundamentos do plano de defesa familiar – defesa passiva e
+                ativa
+              </li>
+              <li>- Dinâmica de CQB e Baixa Luminosidade</li>
+            </ul>
+          ),
+        },
+      ],
+    },
   },
 ];
 
@@ -220,12 +226,18 @@ function Course() {
                   isOpen={modalIsOpen[index]}
                   onRequestClose={() => toggleModal(index)}
                 >
-                  <h2 className="text-xl mb-4">Este é o conteúdo do modal</h2>
+                  <h2 className="text-[3em] bebas_neue-font mb-4 bg-gradient-to-b from-neutral-700 to-neutral-900 text-white px-5">
+                    {curso.title}
+                  </h2>
+                  <h1 className="py-2 text-[1em] inter-font">{curso.text}</h1>
+                  <h1>{curso.modal.text}</h1>
                   <div>
-                    {curso.detail &&
-                      curso.detail.map((item, idx2) => (
-                        <h2 key={idx2}>{item}</h2>
-                      ))}
+                    {curso.modal.detail.map((item, idx2) => (
+                      <div key={idx2}>
+                        <h2 className="font-bold">{item.title}</h2>
+                        <div>{item.text}</div>
+                      </div>
+                    ))}
                   </div>
                   <button
                     className="mt-4 bg-red-500 text-white px-4 py-2 rounded"
