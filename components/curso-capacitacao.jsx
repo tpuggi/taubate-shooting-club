@@ -125,6 +125,24 @@ export default function capacitacao() {
             </div>
           </div>
         ))}
+      </div>{" "}
+      <div className="mx-20 text-center">
+        <p className="text-[38px] montserrat_classic-font">
+          Fique ligado em nossas redes sociais para sempre receber as
+          atualizações, como datas e inscrições para futuros campeonatos!!
+        </p>
+      </div>
+      <div className="pt-20 pb-10 flex justify-around items-center space-x-4 w-full pl-3">
+        {CONTATOS.map((contato, idx) => (
+          <Link key={idx} href={contato.link} className="flex items-center">
+            <Image
+              src={contato.src}
+              alt={contato.text + "ícone"}
+              className="w-10 h-10 mr-2"
+            />
+            <p className="text-[24px] neue_montreal-font">{contato.text}</p>
+          </Link>
+        ))}
       </div>
     </div>
   );

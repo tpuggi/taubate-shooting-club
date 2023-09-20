@@ -39,7 +39,7 @@ function sociate() {
         <h1 className="pt-32 text-[50px] text-center bebas_neue-font">
           SEJA SÓCIO DO TAUBATÉ SHOOTING CLUB
         </h1>
-        <h3 className="text-[25px] text-red-800 text-center montserrat-font">
+        <h3 className="text-[25px] text-red-800 text-center montserrat_classic-font">
           Defesa, Esporte ou Lazer – Pratique em segurança com profissionais
           qualificados.
         </h3>
@@ -195,7 +195,7 @@ function sociate() {
       <div className="text-white text-center">
         <div className="ml-20 mr-20">
           {titleContact.map((titleContact, idx) => (
-            <p className="text-[38px] montserrat-font" key={idx}>
+            <p className="text-[38px] montserrat_classic-font" key={idx}>
               {titleContact.title}
             </p>
           ))}

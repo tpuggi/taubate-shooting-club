@@ -89,7 +89,7 @@ function Championchips() {
       <div className="grid grid-cols-2 gap-3 pb-20">
         <div className="h-auto max-h-[20rem] w-auto flex items-center m-12 border border-gray-700 rounded-lg shadow  bg-gradient-to-b from-neutral-700 to-neutral-900">
           <div className="origin-top-left px-4">
-            <p className="text-[32px] montserrat-font">Conteudo:</p>
+            <p className="text-[32px] montserrat_classic-font">Conteudo:</p>
             <p className="text-[24px] inter-font">
               Todos os temas da cartilha de armamento e tiro da PF, elaborada
               pelo Serviço de Armamento e Tiro - SAT da Academia Nacional de
@@ -158,7 +158,7 @@ function Championchips() {
         </div>
       </div>
       <div className="ml-20 mr-20">
-        <p className="text-[38px] montserrat-font">
+        <p className="text-[38px] montserrat_classic-font">
           Fique ligado em nossas redes sociais para sempre receber atualizações,
           como datas e inscrições para futuros campeonatos!!
         </p>
