@@ -4,6 +4,7 @@ import Link from "next/link";
 import { socialIcons } from "../context/context";
 import { campsImages } from "../context/context";
 import { conteudoCamps } from "../context/context";
+import Modal from "./modal";
 import bullet from "../public/images/bullete.png";
 
 const CONTATOS = [
@@ -34,41 +35,228 @@ const COURSES = [
     src: campsImages[1].url,
     title: "Operador de Pistola",
     text: "O Curso de operador de pistola é destinado àqueles que querem aprimorar suas técnicas e os fundamentos com pistola, visando melhorar velocidade e precisão.",
-    detail: ["100 cartuchos", "1 dia", "Para sócios e atiradores com CR"],
+    modal: {
+      text: "Horário: Início às 09:00 horas - Término às 18:00 horas.",
+      detail: [
+        {
+          title: "Conteúdo: ",
+          text: (
+            <ul>
+              <li> • Regras Básicas de Segurança</li>
+              <li> • Manuseio, Desmontagem, Conservação e Limpeza da Arma</li>
+            </ul>
+          ),
+        },
+        {
+          title: "Diversos exercícios distribuídos sobre os seguintes tópicos",
+          text: (
+            <ul>
+              <li> • Posições de Tiro</li>
+              <li> • Giros e deslocamentos</li>
+              <li> • Empunhadura/ Visada</li>
+              <li> • Precisão, Saque e Recarga</li>
+              <li> • Uso equilibrado da mão forte e mão de apoio</li>
+              <li> • Solução de Panes</li>
+            </ul>
+          ),
+        },
+        {
+          title: "Incluso: ",
+          text: "Armamento, acessórios, munição, certificado e coffee break. Pré-requisito do curso: aberto para sócios e seus convidados e atiradores que possuam CR (Certificado de Registro) emitido pelo Exército Brasileiro.",
+        },
+      ],
+    },
   },
   {
     src: campsImages[1].url,
     title: "Curso de Armamento e Tiro",
     text: "O curso tem como prioridade construir ou ampliar os conhecimentos do aluno para a utilização consciente e eficaz de armas de fogo.",
-    detail: ["80 disparos no estande", "6 horas", "Diversas Armas"],
+    modal: {
+      text: "Duração: 6 horas - 100 disparos nos simuladores de tiro e 80 disparos no estande de tiro.",
+      detail: [
+        {
+          title: "Objetivo: ",
+          text: (
+            <p>
+              O curso tem como prioridade construir ou ampliar os conhecimentos
+              do aluno para a utilização consciente e eficaz de armas de fogo. ​
+              Você vai assimilar as regras internacionais de segurança, os
+              fundamentos do tiro, comportamento no estande, conhecer tipos de
+              armas e munições, noções de balística e legislação. ​ Você vai
+              manusear revólveres, pistolas, carabinas e espingardas de diversos
+              modelos e calibres e praticar nos simuladores da Laser Shot!
+            </p>
+          ),
+        },
+      ],
+    },
   },
   {
     src: campsImages[1].url,
     title: "Curso de Tiro Tático Defensivo",
     text: "O objetivo do Curso de Tiro Tático Defensivo é preparar o aluno, que já frequentou cursos de tiro e que deseja usar sua arma de fogo para defesa pessoal, ampliando seus conhecimentos.",
-    detail: ["mais de 150 disparos", "16 horas", "Diversos Calibres"],
+    modal: {
+      text: "DURAÇÃO: 16 horas - Mínimo de 150 disparos por aluno nos calibres 22LR, .38SPL, .357 Magnum, .380ACP, .40 S&W e .45ACP (12 gauge e .223Rem opcionais).",
+      detail: [
+        {
+          title: "Objetivo: ",
+          text: "O objetivo do Curso de Tiro Tático Defensivo é preparar o aluno, que já frequentou cursos de tiro e que deseja usar sua arma de fogo para defesa pessoal, ampliando seus conhecimentos.  As aulas teóricas e práticas são ministradas por instrutores de times táticos da Marinha do Brasil, Polícia Civil e Polícia Rodoviária Federal, com ampla experiência em confrontos urbanos e rurais.",
+        },
+        {
+          title: "MANUSEIO DE ARMAS COM SEGURANÇA:",
+          text: "Regras internacionais de segurança. Cuidados que toda arma de fogo exige para que não ocorram acidentes, desde o cuidado com as crianças, bem como carregar, descarregar, limpeza, guarda e porte. Comportamento no estande de tiro. Empunhadura, visada e prática de tiro seco.",
+        },
+        {
+          title: "LEGISLAÇÃO:",
+          text: "Conhecimento do manual de armamento e tiro do DPF para registro de arma de fogo, porte e transporte de armas de fogo. Noções Jurídicas: tipos de crime, exclusão de criminalidade, crime doloso, crime culposo, imprudência, negligência, imperícia, estado de necessidade, legítima defesa, estrito cumprimento do dever legal, exercício regular de direito, crimes contra o patrimônio.",
+        },
+        {
+          title: "BALÍSTICA:",
+          text: "Tipos de munições, projéteis para o tiro ao alvo, projéteis para defesa, projéteis para espingarda, cuidados com a munição, conceitos de segurança, funcionamento de armas e munições. Noções de Balística Interna e Externa. Medicina legal e lesões por arma de fogo.",
+        },
+        {
+          title: "ARMAMENTO: ",
+          text: "Identificação de armas e munições. Princípios de funcionamento de armas de fogo: Classificação: tipos, armas de porte, calibres restritos e permitidos. Noções de manutenção de armamentos. Manuseio de revólveres, pistolas, carabinas, fuzis e espingardas em diversos calibres.",
+        },
+        {
+          title: "TEORIA E PRÁTICA DO TIRO:",
+          text: "Aspectos fundamentais para a prática do tiro: empunhadura, posições de tiro, municiamento, desmuniciamento, solução de panes, visada, alinhamento, controle do gatilho, disparo e análise do tiro. Técnica “Double Tap” (revisada) e disparos com movimentos defensivos e ofensivos. Execução de técnicas de tiro tático: Movimentação, Recarga tática, noções de combate contra alvos múltiplos, noções de combate em ambientes de baixa luminosidade e em ambientes confinados (CQB). Apresentação de técnicas de combate urbano e Análise de vídeos de enfrentamentos urbanos e “cases” reais.",
+        },
+      ],
+    },
   },
   {
     src: campsImages[1].url,
     title: "Curso De Operador De Fuzil",
     text: "Visa a capacitação no manuseio e uso de carabinas na plataforma AR15, IA2 e FAL.",
-    detail: ["50 cartuchos", "1 dia", "Para sócios e atiradores com CR"],
+    modal: {
+      text: "Duração: Um dia de curso",
+      detail: [
+        {
+          title: "Conteúdo: ",
+          text: (
+            <ul>
+              <li>• Regras Básicas de Segurança</li>
+              <li>
+                • Desmontagem, Montagem, Conservação e Limpeza do Armamento
+              </li>
+              <li>• Posições de tiro</li>
+              <li>• Giros e Deslocamentos</li>
+              <li>• Recarga</li>
+              <li>• Solução de panes</li>
+              <li>• Uso de equipamentos ópticos</li>
+            </ul>
+          ),
+        },
+        {
+          title:
+            "Diversos exercícios distribuídos sobre os seguintes tópicos: ",
+          text: (
+            <ul>
+              <li> • Posição de Tiro (em pé, ajoelhado e deitado)</li>
+              <li> • Empunhadura/ Visada</li>
+              <li> • Precisão</li>
+              <li> • Recarga</li>
+              <li> • Solução de panes</li>
+            </ul>
+          ),
+        },
+        {
+          title: "Incluso:",
+          text: "Armamento, acessórios, munição, certificado, apostila e coffee break.",
+        },
+        {
+          title: "Pré-requesito: ",
+          text: "Aberto para sócios e seus convidados. Atiradores que possuam CR (Certificado de Registro) emitido pelo Exército Brasileiro podem participar, sem convite, no valor fixado para visitantes.",
+        },
+      ],
+    },
   },
   {
     src: campsImages[1].url,
     title: "Curso de Operador de Espingarda",
     text: "Visa a capacitação no manuseio e uso de Espingardas de repetição e semi-automáticas.",
-    detail: ["30 cartuchos", "1 dia", "Para sócios e atiradores com CR"],
+    modal: {
+      text: "Duração: Um dia de curso",
+      detail: [
+        {
+          title: "Conteúdo: ",
+          text: (
+            <ul>
+              <li>• Regras Básicas de Segurança</li>
+              <li>
+                • Desmontagem, Montagem, Conservação e Limpeza do Armamento
+              </li>
+              <li>• Posições de tiro</li>
+              <li>• Giros e Deslocamentos</li>
+              <li>• Recarga</li>
+              <li>• Solução de panes</li>
+            </ul>
+          ),
+        },
+        {
+          title:
+            "Diversos exercícios distribuídos sobre os seguintes tópicos: ",
+          text: (
+            <ul>
+              <li> • Posição de Tiro (em pé, ajoelhado e deitado)</li>
+              <li> • Empunhadura/ Visada</li>
+              <li> • Precisão</li>
+              <li> • Recarga</li>
+              <li> • Solução de panes</li>
+            </ul>
+          ),
+        },
+        {
+          title: "Incluso:",
+          text: "Armamento, acessórios, munição, certificado, apostila e coffee break.",
+        },
+        {
+          title: "Pré-requesito: ",
+          text: "Aberto para sócios e seus convidados. Atiradores que possuam CR (Certificado de Registro) emitido pelo Exército Brasileiro podem participar, sem convite, no valor fixado para visitantes.",
+        },
+      ],
+    },
   },
   {
-    src: campsImages[1].url, // Substitua pelo URL da imagem do novo curso
+    src: campsImages[1].url,
     title: "Curso de Operador de Duas Armas",
     text: "A combinação efetiva de armamentos aliada à aplicação perfeita de técnicas de operação. Seja eficaz e sobreviva a eventos violentos utilizando em sintonia os armamentos disponíveis.",
-    detail: ["Pistola/Fuzil - Pistola/Espingarda", "1 dia"],
+    modal: {
+      text: "Duração: Um dia",
+      detail: [
+        {
+          title: "Conteúdo:",
+          text: (
+            <ul>
+              <li>• Operação de armas curtas e longas</li>
+              <li>• Reação sob estresse e Autocontrole</li>
+              <li>• Transição de armas</li>
+              <li>• Giros e Deslocamentos</li>
+              <li>• Noções de CQB</li>
+              <li>• Noções de Combate em Baixa luminosidade</li>
+            </ul>
+          ),
+        },
+        {
+          title: "Incluso:",
+          text: "Armamento, acessórios, munição, certificado, apostila e coffee break.",
+        },
+      ],
+    },
   },
 ];
 
 function ACourse() {
+  const [modalIsOpen, setModalIsOpen] = useState(
+    Array(COURSES.length).fill(false)
+  );
+
+  const toggleModal = (index) => {
+    const newStates = [...modalIsOpen];
+    newStates[index] = !newStates[index];
+    setModalIsOpen(newStates);
+  };
   return (
     <div className="text-white mt-28">
       <div className="ml-20 mr-20">
@@ -114,14 +302,7 @@ function ACourse() {
                 <div>
                   <p className="text-[90%] inter-font">{curso.text}</p>
                 </div>
-                {curso.detail.map((det, idx) => (
-                  <div
-                    key={idx}
-                    className="bebas_neue-font flex items-center pl-4 text-[1em] py-2"
-                  >
-                  </div>
-                ))}
-                                <button
+                <button
                   className="bg-red-800 shadow border border-black border-opacity-20 text-center text-xl py-2 px-8 font-extrabold hover:shadow-2xl mt-8 mx-auto ml-20"
                   style={{
                     fontWeight: "bold",
@@ -129,9 +310,34 @@ function ACourse() {
                     border: "2px solid white",
                     fontFamily: "neue_montreal",
                   }}
+                  onClick={() => toggleModal(index)}
                 >
                   SAIBA MAIS
                 </button>
+                <Modal
+                  isOpen={modalIsOpen[index]}
+                  onRequestClose={() => toggleModal(index)}
+                >
+                  <h2 className="text-[3em] bebas_neue-font mb-4 bg-gradient-to-b from-neutral-700 to-neutral-900 text-white px-5">
+                    {curso.title}
+                  </h2>
+                  <h1 className="py-2 text-[1em] inter-font">{curso.text}</h1>
+                  <h1>{curso.modal.text}</h1>
+                  <div>
+                    {curso.modal.detail.map((item, idx2) => (
+                      <div key={idx2}>
+                        <h2 className="font-bold">{item.title}</h2>
+                        <div>{item.text}</div>
+                      </div>
+                    ))}
+                  </div>
+                  <button
+                    className="mt-4 bg-red-500 text-white px-4 py-2 rounded"
+                    onClick={() => toggleModal(index)}
+                  >
+                    Fechar Modal
+                  </button>
+                </Modal>
               </div>
             </div>
           </div>
