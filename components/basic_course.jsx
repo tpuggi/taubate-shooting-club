@@ -102,15 +102,15 @@ const COURSES = [
           title: "Conteúdo: (teórico e prático)",
           text: (
             <ul>
-              <li> - Regras</li>
-              <li> - Técnicas de Visada e Transição de Alvos</li>
-              <li> - Precisão, Cadência e Segurança</li>
-              <li> - Movimento de Alvo a Alvo</li>
-              <li> - Deslocamento Lateral e Frontal</li>
-              <li> - Entrada e Saída de Posto</li>
-              <li> - Recarga e Tiro Barricado</li>
-              <li> - Dúvidas Sobre Regulamentos</li>
-              <li> - Execução de Pistas</li>
+              <li> • Regras</li>
+              <li> • Técnicas de Visada e Transição de Alvos</li>
+              <li> • Precisão, Cadência e Segurança</li>
+              <li> • Movimento de Alvo a Alvo</li>
+              <li> • Deslocamento Lateral e Frontal</li>
+              <li> • Entrada e Saída de Posto</li>
+              <li> • Recarga e Tiro Barricado</li>
+              <li> • Dúvidas Sobre Regulamentos</li>
+              <li> • Execução de Pistas</li>
             </ul>
           ),
         },
@@ -137,15 +137,16 @@ const COURSES = [
           title: "Conteúdo: ",
           text: (
             <ul>
-              <li>- Eventos da natureza: preparação e reação humana</li>
-              <li>- Princípios da autodefesa</li>
-              <li>- Vigilância eletrônica</li>
-              <li>- Dinâmica das ocorrências mais comuns</li>
+              <li> • Eventos da natureza: preparação e reação humana</li>
+              <li> • Princípios da autodefesa</li>
+              <li> • Vigilância eletrônica</li>
+              <li> • Dinâmica das ocorrências mais comuns</li>
               <li>
-                - Fundamentos do plano de defesa familiar – defesa passiva e
+                {" "}
+                • Fundamentos do plano de defesa familiar – defesa passiva e
                 ativa
               </li>
-              <li>- Dinâmica de CQB e Baixa Luminosidade</li>
+              <li> • Dinâmica de CQB e Baixa Luminosidade</li>
             </ul>
           ),
         },
