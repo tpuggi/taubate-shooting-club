@@ -53,6 +53,14 @@ export const advancedCourse = importImages(
   )
 );
 
+export const capacitacaoCourse = importImages(
+  require.context(
+    "../public/contexts/capacitacao-course",
+    false,
+    /\.(png|jpe?g|svg)$/
+  )
+);
+
 export const bigCarouselImages = importImages(
   require.context(
     "../public/contexts/big-carousel/",

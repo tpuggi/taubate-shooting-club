@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { socialIcons } from "@/context/context";
-import SomeImage from "@/public/images/clube.jpg";
+import { socialIcons, capacitacaoCourse } from "@/context/context";
 import bullet from "../public/images/bullete.png";
 
 const CONTATOS = [
@@ -30,7 +29,7 @@ const CONTATOS = [
 const CONTEUDO = [
   {
     title: "AULA TEÓRICA",
-    image: "",
+    image: capacitacaoCourse[0].url,
     bullets: [
       "CONDUTA NO ESTANDE",
       "NORMAS DE SEGURANÇA",
@@ -41,7 +40,7 @@ const CONTEUDO = [
   },
   {
     title: "AULA PRÁTICA",
-    image: "",
+    image: capacitacaoCourse[1].url,
     bullets: [
       "20 TIROS",
       "ARMA LONGA",
@@ -52,7 +51,7 @@ const CONTEUDO = [
   },
   {
     title: "SIMULADO",
-    image: "",
+    image: capacitacaoCourse[2].url,
     bullets: [
       "MÍNIMO DE 60%",
       "PRÁTICA DE TIRO",
@@ -83,7 +82,7 @@ export default function capacitacao() {
           </div>
         </div>
         <div className="flex justify-center">
-          <Image src={SomeImage} alt="imagem capacitação" />
+          <Image src={capacitacaoCourse[0].url} alt="imagem capacitação" />
         </div>
       </div>
       <div className="mx-20">
@@ -91,19 +90,13 @@ export default function capacitacao() {
       </div>
       <div className="px-6 items-center grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-9 pb-10">
         {CONTEUDO.map((conteudo, index) => (
-          <div
-            key={index}
-            className=""
-            data-aos={`fade-${
-              index % 3 == 0 ? "right" : index % 3 == 1 ? "up" : "left"
-            }`}
-          >
+          <div key={index} data-aos="fade-up">
             <div className="origin-top-left bg-gradient-to-b to-neutral-900 from-red-800 rounded-t-[10px] p-3 ">
               <p className="text-[32px] bebas_neue-font text-center">
                 {conteudo.title}
               </p>
             </div>
-            <div className="">
+            <div>
               <Image src={conteudo.image} alt={conteudo.title} />
             </div>
             <div className="origin-top-left mt-1 p-6 pb-12 bg-red-800">
