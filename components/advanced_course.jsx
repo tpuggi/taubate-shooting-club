@@ -70,14 +70,17 @@ const COURSES = [
 
 function ACourse() {
   return (
-    <div className="text-white mt-28">
+    <div className="text-white mt-28" data-aos="fade-up">
       <div className="ml-20 mr-20">
         <p className="text-[90px] text-center bebas_neue-font">
           Cursos de Aprimoramento no Tiro
         </p>
       </div>
       <div className="grid grid-cols-2 gap-3">
-        <div className="h-auto max-h-[20rem] w-auto flex items-center m-12 border border-gray-700 rounded-lg shadow  bg-gradient-to-b from-neutral-700 to-neutral-900">
+        <div
+          className="h-auto max-h-[20rem] w-auto flex items-center m-12 border border-gray-700 rounded-lg shadow  bg-gradient-to-b from-neutral-700 to-neutral-900"
+          data-aos="flip-right"
+        >
           <div className="origin-top-left px-4">
             <p className="text-[32px] montserrat_classic-font">Conteudo:</p>
             <p className="text-[24px] inter-font">
@@ -88,18 +91,23 @@ function ACourse() {
             </p>
           </div>
         </div>
-        <div className="flex justify-center py-10">
+        <div className="flex justify-center py-10" data-aos="flip-left">
           <Image src={conteudoCamps[1].url} alt="Curso de Iniciação no Tiro" />
         </div>
       </div>
       <div className="ml-20 mr-20">
         <p className="text-[80px] bebas_neue-font">Cursos presentes:</p>
       </div>
-      <div className="md:grid md:grid-cols-2 flex flex-wrap gap-3 m-10 ">
+      <div
+        className="md:grid md:grid-cols-2 flex flex-wrap gap-3 m-10 "
+        data-aos="fade-down"
+      >
         {COURSES.map((curso, index) => (
           <div
             className="mr-1 pl-10 pt-10 pb-10 bg-red-800 border border-gray-700"
             key={index}
+            data-aos="fade-up"
+            data-aos-delay={200 + 80 * index}
           >
             <div className="pb-2">
               <p className="text-[32px] bebas_neue-font">{curso.title}</p>

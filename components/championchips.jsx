@@ -85,10 +85,10 @@ const CAMPEONATOS = [
 ];
 function Championchips() {
   return (
-    <div className="text-white mt-28">
+    <div className="text-white mt-28" data-aos="fade-up">
       <div className="grid grid-cols-2 gap-3 pb-20">
         <div className="h-auto max-h-[20rem] w-auto flex items-center m-12 border border-gray-700 rounded-lg shadow  bg-gradient-to-b from-neutral-700 to-neutral-900">
-          <div className="origin-top-left px-4">
+          <div className="origin-top-left px-4" data-aos="flip-right">
             <p className="text-[32px] montserrat_classic-font">Conteudo:</p>
             <p className="text-[24px] inter-font">
               Todos os temas da cartilha de armamento e tiro da PF, elaborada
@@ -97,7 +97,7 @@ function Championchips() {
             </p>
           </div>
         </div>
-        <div className="flex justify-center py-10">
+        <div className="flex justify-center py-10" data-aos="flip-left">
           <Image src={conteudoCamps[1].url} alt="CAMPEONATOS" />
         </div>
       </div>
@@ -107,9 +107,14 @@ function Championchips() {
         </p>
       </div>
       <div className="text-white">
-        <div className="grid grid-cols-2 gap-3 pb-20 m-10">
+        <div className="grid grid-cols-2 gap-3 pb-20 m-10" data-aos="fade-down">
           {CAMPEONATOS.map((campeonato, idx) => (
-            <div className="mr-1 pl-10 pt-10  bg-red-800" key={idx}>
+            <div
+              className="mr-1 pl-10 pt-10  bg-red-800"
+              key={idx}
+              data-aos="fade-up"
+              data-aos-delay={200 + 80 * idx}
+            >
               <div>
                 <p className="text-[32px] pb-6 bebas_neue-font">
                   {campeonato.title}
