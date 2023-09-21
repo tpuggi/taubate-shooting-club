@@ -2,10 +2,8 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { socialIcons } from "../context/context";
-import { campsImages } from "../context/context";
-import { conteudoCamps } from "../context/context";
+import { advancedCourse } from "../context/context";
 import Modal from "./modal";
-import bullet from "../public/images/bullete.png";
 
 const CONTATOS = [
   {
@@ -32,7 +30,7 @@ const CONTATOS = [
 
 const COURSES = [
   {
-    src: campsImages[1].url,
+    src: advancedCourse[1].url,
     title: "Operador de Pistola",
     text: "O Curso de operador de pistola é destinado àqueles que querem aprimorar suas técnicas e os fundamentos com pistola, visando melhorar velocidade e precisão.",
     modal: {
@@ -68,7 +66,7 @@ const COURSES = [
     },
   },
   {
-    src: campsImages[1].url,
+    src: advancedCourse[1].url,
     title: "Curso de Armamento e Tiro",
     text: "O curso tem como prioridade construir ou ampliar os conhecimentos do aluno para a utilização consciente e eficaz de armas de fogo.",
     modal: {
@@ -92,7 +90,7 @@ const COURSES = [
     },
   },
   {
-    src: campsImages[1].url,
+    src: advancedCourse[1].url,
     title: "Curso de Tiro Tático Defensivo",
     text: "O objetivo do Curso de Tiro Tático Defensivo é preparar o aluno, que já frequentou cursos de tiro e que deseja usar sua arma de fogo para defesa pessoal, ampliando seus conhecimentos.",
     modal: {
@@ -126,7 +124,7 @@ const COURSES = [
     },
   },
   {
-    src: campsImages[1].url,
+    src: advancedCourse[1].url,
     title: "Curso De Operador De Fuzil",
     text: "Visa a capacitação no manuseio e uso de carabinas na plataforma AR15, IA2 e FAL.",
     modal: {
@@ -173,7 +171,7 @@ const COURSES = [
     },
   },
   {
-    src: campsImages[1].url,
+    src: advancedCourse[1].url,
     title: "Curso de Operador de Espingarda",
     text: "Visa a capacitação no manuseio e uso de Espingardas de repetição e semi-automáticas.",
     modal: {
@@ -219,7 +217,7 @@ const COURSES = [
     },
   },
   {
-    src: campsImages[1].url,
+    src: advancedCourse[1].url,
     title: "Curso de Operador de Duas Armas",
     text: "A combinação efetiva de armamentos aliada à aplicação perfeita de técnicas de operação. Seja eficaz e sobreviva a eventos violentos utilizando em sintonia os armamentos disponíveis.",
     modal: {
@@ -280,7 +278,7 @@ function ACourse() {
           </div>
         </div>
         <div className="flex justify-center py-10" data-aos="flip-left">
-          <Image src={conteudoCamps[1].url} alt="Curso de Iniciação no Tiro" />
+          <Image src={advancedCourse[1].url} alt="Curso de Iniciação no Tiro" />
         </div>
       </div>
       <div className="ml-20 mr-20">
@@ -330,12 +328,16 @@ function ACourse() {
                     {curso.title}
                   </h2>
                   <h1 className="py-2 text-[1em] inter-font">{curso.text}</h1>
-                  <h1>{curso.modal.text}</h1>
+                  <h1 className="inter-font py-2 text-[1em]">
+                    {curso.modal.text}
+                  </h1>
                   <div>
                     {curso.modal.detail.map((item, idx2) => (
                       <div key={idx2}>
-                        <h2 className="font-bold">{item.title}</h2>
-                        <div>{item.text}</div>
+                        <h2 className="font-bold montserrat_classic-font text-[1.5em]">
+                          {item.title}
+                        </h2>
+                        <div className="inter-font text-[1em]">{item.text}</div>
                       </div>
                     ))}
                   </div>

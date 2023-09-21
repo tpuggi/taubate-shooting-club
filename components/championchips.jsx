@@ -86,6 +86,9 @@ const CAMPEONATOS = [
 function Championchips() {
   return (
     <div className="text-white mt-28" data-aos="fade-up">
+      <div className="ml-20 mr-20">
+        <p className="text-[90px] text-center bebas_neue-font">CAMPEONATOS</p>
+      </div>
       <div className="grid grid-cols-2 gap-3 pb-20">
         <div className="h-auto max-h-[20rem] w-auto flex items-center m-12 border border-gray-700 rounded-lg shadow  bg-gradient-to-b from-neutral-700 to-neutral-900">
           <div className="origin-top-left px-4" data-aos="flip-right">

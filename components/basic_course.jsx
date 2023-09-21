@@ -2,9 +2,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { socialIcons } from "../context/context";
-import { campsImages } from "../context/context";
-import { conteudoCamps } from "../context/context";
-import bullet from "../public/images/bullete.png";
+import { basicCourse } from "../context/context";
 import Modal from "./modal";
 
 const CONTATOS = [
@@ -38,7 +36,7 @@ const titleContact = [
 
 const COURSES = [
   {
-    src: campsImages[1].url,
+    src: basicCourse[1].url,
     title: "Fundamentos no tiro",
     text: "O curso de fundamentos do tiro é o indicado para os que desejam iniciar no tiro esportivo ou de defesa, é uma experiência fundamental para habilitar ou capacitar ao uso de armas de fogo.",
     modal: {
@@ -64,7 +62,7 @@ const COURSES = [
     },
   },
   {
-    src: campsImages[1].url,
+    src: basicCourse[1].url,
     title: "Curso de capacitação",
     text: "O curso tem como prioridade qualificar o aluno para a prova de capacidade técnica aplicada por Instrutor de Armamento e Tiro da Polícia Federal (IAT/PF).",
     modal: {
@@ -82,7 +80,7 @@ const COURSES = [
     },
   },
   {
-    src: campsImages[1].url,
+    src: basicCourse[1].url,
     title: "Curso de Atirador Esportivo",
     text: "O curso tem como prioridade, capacitar atiradores iniciantes para a prática do Tiro Defensivo (IDSC) ou Tiro Tático Dinâmico (TTD).",
     modal: {
@@ -127,7 +125,7 @@ const COURSES = [
     },
   },
   {
-    src: campsImages[1].url,
+    src: basicCourse[1].url,
     title: "Home Defense",
     text: "Além de preparação para enfrentar eventos naturais, visa capacitar o proprietário de armas de fogo para sua utilização para defesa pessoal (personal protection) e para a defesa residencial (home defense) contra ameaças humanas.",
     modal: {
@@ -188,13 +186,16 @@ function Course() {
           </div>
         </div>
         <div className="flex justify-center py-10" data-aos="flip-left">
-          <Image src={conteudoCamps[1].url} alt="Curso de Iniciação no Tiro" />
+          <Image src={basicCourse[1].url} alt="Curso de Iniciação no Tiro" />
         </div>
       </div>
       <div className="ml-20 mr-20">
         <p className="text-[80px] bebas_neue-font">Cursos presentes:</p>
       </div>
-      <div className="md:grid md:grid-cols-2 flex flex-wrap gap-3 m-10" data-aos="fade-down">
+      <div
+        className="md:grid md:grid-cols-2 flex flex-wrap gap-3 m-10"
+        data-aos="fade-down"
+      >
         {COURSES.map((curso, index) => (
           <div
             className="mx-0.5 my-0.5 px-5 pt-4 bg-red-800 shadow-lg"

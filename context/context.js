@@ -37,6 +37,22 @@ export const conteudoCamps = importImages(
   )
 );
 
+export const basicCourse = importImages(
+  require.context(
+    "../public/contexts/basic-course",
+    false,
+    /\.(png|jpe?g|svg)$/
+  )
+);
+
+export const advancedCourse = importImages(
+  require.context(
+    "../public/contexts/advanced-course",
+    false,
+    /\.(png|jpe?g|svg)$/
+  )
+);
+
 export const bigCarouselImages = importImages(
   require.context(
     "../public/contexts/big-carousel/",
