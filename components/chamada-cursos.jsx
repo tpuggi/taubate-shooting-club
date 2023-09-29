@@ -15,7 +15,7 @@ const ChamadaCursos = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prevSlide) => (prevSlide + 1) % totalSlides);
-    }, 1000);
+    }, 1750);
 
     return () => clearInterval(interval);
   });
@@ -45,8 +45,8 @@ const ChamadaCursos = () => {
         <p className="text-[1.75em] neue_montreal-font">
           AGENDE UMA VISITA AGORA MESMO!
         </p>
-        <div className="flex justify-center py-4">
-          <Image src={bullet} alt="bullet icon" className="w-[89px] h-[22px]" />
+        <div className="flex justify-center">
+          <Image src={bullet} alt="bullet icon" className="w-20" />
         </div>
         <div className="flex justify-center items-center py-4">
           <button

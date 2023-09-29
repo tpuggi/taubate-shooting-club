@@ -33,20 +33,23 @@ const CalendarPage = () => {
   }, []);
 
   return (
-    <div className="flex flex-wrap justify-center inter-font text-white m-10">
-      <h1 className="text-[4em] montserrat_classic-font" data-aos="flip-right">
-        Calendário
-      </h1>
+    <div className="inter-font text-white">
       <div
-        className="bg-gradient-to-b from-neutral-700 to-neutral-900 text-white h-full w-full"
-        data-aos="fade-up"
+        className="h-[8em] mt-10 bg-red-800 items-center flex justify-center bg-center bg-blend-multiply bg-opacity-40 bg-[url('/images/clube.jpg')]"
+        data-aos="flip-left"
       >
-        <FullCalendar
-          plugins={[dayGridPlugin]}
-          initialView="dayGridMonth"
-          events={events}
-          locale="pt-br"
-        />
+        <h1 className="text-2xl font-bold mb-4 text-[2em]">Calendário</h1>
+      </div>
+      <div className="flex justify-center  text-white " data-aos="fade-up">
+        <div className="h-full w-full m-10 bg-gradient-to-b from-neutral-700 to-neutral-900">
+          <FullCalendar
+            plugins={[dayGridPlugin]}
+            initialView="dayGridMonth"
+            events={events}
+            locale="pt-br"
+            height={600}
+          />
+        </div>
       </div>
     </div>
   );

@@ -110,7 +110,10 @@ const Footer = () => {
                 ))}
               </div>
               <Link
-                href="/"
+                href={{
+                  pathname: "/",
+                  query: { id: "targetElement" },
+                }}
                 className="mt-5 text-[20px] font-bold text-white-400 hover:text-white-200"
               >
                 Nossos Serviços

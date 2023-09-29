@@ -108,11 +108,11 @@ const Faq = () => {
       <div className="grid gap-4 mb-10">
         {FAQ.map((item, index) => (
           <div
-            className="bg-gradient-to-b from-neutral-700 to-neutral-900 p-4"
+            className=" bg-gradient-to-br from-neutral-900 to-red-800 p-4"
             key={index}
             onClick={() => toggleDropdown(index)}
             data-aos="fade-up"
-            data-aos-delay={400 + 50 * (index % 9)}
+            data-aos-delay={400 + 50 * (index % 5)}
           >
             <p className="text-[25px] text-white inter-font flex items-center text-4xl">
               {item.pergunta}{" "}

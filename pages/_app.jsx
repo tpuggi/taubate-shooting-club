@@ -7,11 +7,12 @@ import { useRouter } from "next/router";
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
+  
 
   useEffect(() => {
     AOS.init({
       duration: 1000,
-      offset: 100,
+      offset: 20,
     });
   }, []);
   return (

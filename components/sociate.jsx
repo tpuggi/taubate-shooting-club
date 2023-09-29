@@ -36,7 +36,7 @@ function sociate() {
   return (
     <div>
       <div className="text-white" data-aos="fade-down">
-        <h1 className="pt-32 text-[50px] text-center bebas_neue-font">
+        <h1 className="pt-12 text-[50px] text-center bebas_neue-font">
           SEJA SÓCIO DO TAUBATÉ SHOOTING CLUB
         </h1>
         <h3 className="text-[25px] text-red-800 text-center montserrat_classic-font">

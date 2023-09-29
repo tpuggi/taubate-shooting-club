@@ -13,6 +13,14 @@ const importImages = (r) => {
     }));
 };
 
+export const medalIcons = importImages(
+  require.context(
+    "../public/contexts/campeonatos-icons/",
+    false,
+    /\.(png|jpe?g|svg)$/
+  )
+);
+
 export const socialIcons = importImages(
   require.context(
     "../public/contexts/footer-icons/",

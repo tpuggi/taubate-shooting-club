@@ -34,7 +34,7 @@ const AboutUs = () => {
             </p>
             <div className="md:p-6 p-2 flex flex-nowrap justify-center">
               <Link
-                href="/seja-socio"
+                href="/sejaSocio"
                 className="bg-red-800 shadow border-white bebas_neue-font text-center px-8 md:px-16 md:py-4 font-[1em] hover:shadow-2xl"
                 style={{
                   fontWeight: "bold",

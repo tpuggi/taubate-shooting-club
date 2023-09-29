@@ -1,10 +1,8 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { socialIcons } from "../context/context";
-import { campsImages } from "../context/context";
+import { socialIcons, campsImages, medalIcons } from "../context/context";
 import { conteudoCamps } from "../context/context";
-import bullet from "../public/images/bullete.png";
 
 const CONTATOS = [
   {
@@ -135,29 +133,17 @@ function Championchips() {
                       {campeonato.text}
                     </p>
                   </div>
-                  <div className="pt-5 grid grid-cols-2">
-                    <div>
-                      <Image
-                        src={bullet}
-                        alt="bullet icon"
-                        className="pt-2 pl-7 w-25 h-35"
-                      />
-                      <Image
-                        src={bullet}
-                        alt="bullet icon"
-                        className="pt-6 pl-7 w-25 h-35"
-                      />
-                      <Image
-                        src={bullet}
-                        alt="bullet icon"
-                        className="pt-6 pl-7 w-25 h-35"
-                      />
-                    </div>
-                    <div className="bebas_neue-font text-[28px]">
-                      <p>1 lugar</p>
-                      <p className="pt-1">2 lugar</p>
-                      <p className="pt-1">3 lugar</p>
-                    </div>
+                  <div className="pt-5 grid grid-rows-3 bebas_neue-font text-[28px]">
+                    {medalIcons.map((medal, index) => (
+                      <div className="grid grid-cols-2">
+                        <Image
+                          src={medal.url}
+                          alt={index + "° Lugar"}
+                          className="pt-2 pl-7 w-20"
+                        />
+                        <p className="items-center flex">{index + 1} lugar</p>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
