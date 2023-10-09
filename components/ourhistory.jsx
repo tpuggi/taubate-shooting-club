@@ -1,4 +1,5 @@
 import clubePhoto from "../public/images/clube.jpg";
+import mission from "../public/images/Atirador Esportivo.jpg";
 import Image from "next/image";
 
 const OurHistory = () => {
@@ -38,7 +39,7 @@ const OurHistory = () => {
           </p>
         </div>
         <div className="grid gap-2">
-          <Image src={clubePhoto} alt="foto do clube" />
+          <Image src={mission} alt="foto do clube" />
         </div>
       </div>
     </div>

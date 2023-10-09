@@ -37,6 +37,14 @@ export const campsImages = importImages(
   )
 );
 
+export const servicesImages = importImages(
+  require.context(
+    "../public/contexts/our-services/",
+    false,
+    /\.(png|jpe?g|svg)$/
+  )
+);
+
 export const conteudoCamps = importImages(
   require.context(
     "../public/contexts/conteudoCamps/",

@@ -1,33 +1,31 @@
-import SomeImage from "../public/images/SomeImage.png";
-import clube from "../public/images/clube.jpg";
-
+import { servicesImages } from "../context/context.js";
 import Image from "next/image";
 
 const SERVICES = [
   {
     title: "Manutenção de Armamentos",
     text: "O TSC possui armeiro credenciado pela polícia federal capacitado para realizar manutenção preventiva ou corretiva do seu equipamento. Também realizamos customização do seu armamento. Pintura e gravação à Laser são nossas especialidades, pelo convênio com a Cammo Arts Custom.",
-    image: SomeImage,
+    image: servicesImages[0].url,
   },
   {
     title: "Despachantes Especializados",
     text: "O TSC possui despachantes especializados. Com eles você não precisará se preocupar com a burocracia que envolve aquisição de arma de fogo, renovação de registro (SINARM e SIGMA) e emissão de Certificado de Registro (CR) de Atirador, Caçador ou Colecionador (CAC), Guias de Tráfego ou Porte de Arma de Fogo.",
-    image: SomeImage,
+    image: servicesImages[1].url,
   },
   {
     title: "Comprovante de capacidade técnica de arma de fogo",
     text: "Possuímos despachantes especializados. Com eles você não precisará se preocupar com a burocracia que envolve aquisição de arma de fogo, renovação de registro (SINARM e SIGMA) e emissão de Certificado de Registro (CR) de Atirador, Caçador ou Colecionador (CAC), Guias de Tráfego ou Porte de Arma de Fogo.",
-    image: SomeImage,
+    image: servicesImages[2].url,
   },
   {
     title: "Treinamentos de alto nível",
     text: "O uso eficiente de armas de fogo exige, basicamente, aprendizado contínuo e treinamento constante. Seja para a prática de esporte ou lazer, seja para defesa pessoal, no TSC você pode iniciar seu aprendizado e desenvolver suas habilidades com instrutores de alto nível. O TSC possui instalações modernas, únicas no Brasil, que utilizam a tecnologia da empresa americana Laser Shot Simulations, a mesma utilizada pela agência federal americana responsável pelo treinamento de todas as agências integrantes do Homeland Defense (CIA, FBI, NSA, CBP..).",
-    image: SomeImage,
+    image: servicesImages[3].url,
   },
   {
     title: "Competições",
     text: "Realizamos regularmente competições de tiro em diversas modalidades. Treine conosco, participe e seja um atleta no ranking do IDSC, Tiro Tático Dinâmico (TTD), Tiro Rápido de Precisão, Shot Precision e IPSC. Com retorno dos níveis de atirador esportivo, o TSC sedia diversas competições de ambito nacional e internacional.",
-    image: SomeImage,
+    image: servicesImages[4].url,
   },
 ];
 
@@ -61,12 +59,12 @@ const OurServices = () => {
               </div>
             ) : null}
 
-            <div className="mx-6 my-10 bg-neutral-900">
+            <div className="mx-6 my-10 bg-neutral-900 rounded-tl-[10px] rounded-tr-[10px]">
               <div className="origin-top-left bg-gradient-to-b from-zinc-800 to-neutral-900 rounded-tl-[10px] rounded-tr-[10px] p-3">
                 <p className="text-[2.3em]">{service.title}</p>
               </div>
-              <div className="origin-top-left p-10">
-                <p className="md:text-[1.75em] text-[90%]">{service.text}</p>
+              <div className="origin-top-left px-10 py-4">
+                <p className="md:text-[120%] text-[90%]">{service.text}</p>
               </div>
             </div>
 
