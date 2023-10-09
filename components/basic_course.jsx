@@ -27,12 +27,6 @@ const CONTATOS = [
     link: "https://wa.me/12997359612?text=Oi",
   },
 ];
-const titleContact = [
-  {
-    title:
-      "Fique ligado em nossas redes sociais para sempre receber as atualizações, como datas e inscrições para futuros campeonatos!!",
-  },
-];
 
 const COURSES = [
   {

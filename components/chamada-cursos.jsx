@@ -6,7 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import slugify from "slugify";
 
-const CURSOS = ["fundamentos-do-tiro", "capacitacao", "atirador-esportivo"];
+const CURSOS = ["fundamentos-do-tiro", "capacitacao", "atirador-esportivo", "home-defense"];
 
 const ChamadaCursos = () => {
   const [currentSlide, setCurrentSlide] = useState(0);

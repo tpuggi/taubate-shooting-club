@@ -34,8 +34,10 @@ const SERVICES = [
 const OurServices = () => {
   return (
     <div className="text-white mt-30" id="servicos" data-aos="fade-up">
-      <p className="text-[80px] neue_montreal-font pl-10">Nossos Serviços</p>
-      <p className="text-[25px] pl-10 pt-5 inter-font">
+      <p className="text-[80px] neue_montreal-font text-center md:text-left md:ml-5">
+        Nossos Serviços
+      </p>
+      <p className="text-[25px] px-5 pt-5 inter-font">
         Realizamos diversos <strong>cursos de capacitação</strong> com convênio
         para aplicar os testes exigidos para a <strong>aquisição</strong> de
         armas de fogo, <strong>renovação</strong> de registros ou{" "}
@@ -46,7 +48,7 @@ const OurServices = () => {
         {SERVICES.map((service, index) => (
           <div
             key={index}
-            className="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-3"
+            className="md:grid flex flex-wrap md:grid-cols-2 gap-3"
             data-aos="fade-down"
           >
             {index % 2 == 0 ? (
@@ -54,7 +56,7 @@ const OurServices = () => {
                 <Image
                   alt={service.title}
                   src={service.image}
-                  className="w-full h-full"
+                  className=" self-center h-full"
                 />
               </div>
             ) : null}
@@ -63,8 +65,8 @@ const OurServices = () => {
               <div className="origin-top-left bg-gradient-to-b from-zinc-800 to-neutral-900 rounded-tl-[10px] rounded-tr-[10px] p-3">
                 <p className="text-[2.3em]">{service.title}</p>
               </div>
-              <div className="origin-top-left mt-1 p-10">
-                <p className="text-[1.75em]">{service.text}</p>
+              <div className="origin-top-left p-10">
+                <p className="md:text-[1.75em] text-[90%]">{service.text}</p>
               </div>
             </div>
 
@@ -73,7 +75,7 @@ const OurServices = () => {
                 <Image
                   alt={service.title}
                   src={service.image}
-                  className="w-full h-full "
+                  className="self-center h-full "
                 />
               </div>
             ) : null}
