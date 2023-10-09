@@ -63,30 +63,35 @@ const CONTEUDO = [
 
 export default function capacitacao() {
   return (
-    <div className="text-white mt-12">
-      <div className="mx-20">
-        <p className="text-[90px] text-center bebas_neue-font">
+    <div className="text-white mt-12" data-aos="fade-up">
+      <div className="mx-10">
+        <p className="text-[4em] text-center bebas_neue-font">
           Curso de Capacitação
         </p>
       </div>
-      <div className="grid grid-cols-2 gap-3 py-10">
-        <div className="h-auto max-h-[20rem] w-auto flex items-center m-12 border border-gray-700 rounded-lg shadow bg-gradient-to-b from-neutral-700 to-neutral-900">
-          <div className="origin-top-left px-4">
-            <p className="text-[32px] montserrat_classic-font">Objetivo:</p>
-            <p className="text-[24px] inter-font">
+      <div className="md:grid md:grid-cols-2 gap-3 py-10 flex flex-wrap-reverse">
+        <div
+          className="h-auto max-h-[20rem] w-auto flex items-center md:m-12 m-6 p-6 border border-gray-700 rounded-lg shadow bg-gradient-to-b from-neutral-700 to-neutral-900"
+          data-aos="flip-right"
+        >
+          <div className="origin-top-left md:px-4">
+            <p className="md:text-[2.5em] text-[2em] montserrat_classic-font">
+              Objetivo:
+            </p>
+            <p className="md:text-[1.4em] text-[1em] inter-font">
               O curso tem como prioridade{" "}
-              <strong className="text-[30px]">qualificar</strong> o aluno para a
-              prova de capacidade técnica aplicada por Instrutor de Armamento e
-              Tiro da Polícia Federal (IAT/PF).
+              <strong className="text-[1.4em] md:text-[2em]">qualificar</strong>{" "}
+              o aluno para a prova de capacidade técnica aplicada por Instrutor
+              de Armamento e Tiro da Polícia Federal (IAT/PF).
             </p>
           </div>
         </div>
-        <div className="flex justify-center">
+        <div className="flex justify-center" data-aos="flip-left">
           <Image src={capacitacaoCourse[0].url} alt="imagem capacitação" />
         </div>
       </div>
       <div className="mx-20">
-        <p className="text-[80px] bebas_neue-font">Conteúdo: </p>
+        <p className="text-[80px] bebas_neue-font text-center">Conteúdo: </p>
       </div>
       <div className="px-6 items-center grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-9 pb-10">
         {CONTEUDO.map((conteudo, index) => (
@@ -119,21 +124,25 @@ export default function capacitacao() {
           </div>
         ))}
       </div>{" "}
-      <div className="mx-20 text-center">
-        <p className="text-[38px] montserrat_classic-font">
+      <div className="md:mx-10 mx-2 mb-5 text-center">
+        <p className="md:text-[2.5em] text-[1em] montserrat_classic-font flex">
           Fique ligado em nossas redes sociais para sempre receber as
           atualizações, como datas e inscrições para futuros campeonatos!!
         </p>
       </div>
-      <div className="pt-20 pb-10 flex justify-around items-center space-x-4 w-full pl-3">
+      <div className="md:grid md:grid-cols-4 flex flex-wrap gap-4 justify-center text-white">
         {CONTATOS.map((contato, idx) => (
-          <Link key={idx} href={contato.link} className="flex items-center">
+          <Link
+            key={idx}
+            href={contato.link}
+            className="flex items-center justify-center"
+          >
             <Image
               src={contato.src}
               alt={contato.text + "ícone"}
-              className="w-10 h-10 mr-2"
+              className="w-6 h-6 mx-2 md:w-12 md:h-12"
             />
-            <p className="text-[24px] neue_montreal-font">{contato.text}</p>
+            <p>{contato.text}</p>
           </Link>
         ))}
       </div>

@@ -83,15 +83,20 @@ const CAMPEONATOS = [
 ];
 function Championchips() {
   return (
-    <div className="text-white mt-28" data-aos="fade-up">
-      <div className="ml-20 mr-20">
-        <p className="text-[90px] text-center bebas_neue-font">CAMPEONATOS</p>
+    <div className="text-white my-12" data-aos="fade-up">
+      <div className="mx-5">
+        <p className="text-[4em] text-center bebas_neue-font">CAMPEONATOS</p>
       </div>
-      <div className="grid grid-cols-2 gap-3 pb-20">
-        <div className="h-auto max-h-[20rem] w-auto flex items-center m-12 border border-gray-700 rounded-lg shadow  bg-gradient-to-b from-neutral-700 to-neutral-900">
-          <div className="origin-top-left px-4" data-aos="flip-right">
-            <p className="text-[32px] montserrat_classic-font">Conteudo:</p>
-            <p className="text-[24px] inter-font">
+      <div className="md:grid md:grid-cols-2 gap-3 py-10 flex flex-wrap-reverse">
+        <div
+          className="h-auto max-h-[20rem] w-auto flex items-center md:m-12 m-6 p-6 border border-gray-700 rounded-lg shadow bg-gradient-to-b from-neutral-700 to-neutral-900"
+          data-aos="flip-right"
+        >
+          <div className="origin-top-left md:px-4">
+            <p className="md:text-[2.5em] text-[2em]  montserrat_classic-font">
+              Conteudo:
+            </p>
+            <p className="md:text-[1.4em] text-[1em] inter-font">
               Todos os temas da cartilha de armamento e tiro da PF, elaborada
               pelo Serviço de Armamento e Tiro - SAT da Academia Nacional de
               Polícia.
@@ -102,70 +107,73 @@ function Championchips() {
           <Image src={conteudoCamps[1].url} alt="CAMPEONATOS" />
         </div>
       </div>
-      <div className="ml-20 mr-20">
-        <p className="text-[80px] bebas_neue-font">
+      <div className="mx-10">
+        <p className="text-[3em] md:text-[80px] bebas_neue-font md:text-center">
           Alguns campeonatos realizados em nosso estande:
         </p>
       </div>
-      <div className="text-white">
-        <div className="grid grid-cols-2 gap-3 pb-20 m-10" data-aos="fade-down">
-          {CAMPEONATOS.map((campeonato, idx) => (
-            <div
-              className="mr-1 pl-10 pt-10  bg-red-800"
-              key={idx}
-              data-aos="fade-up"
-              data-aos-delay={200 + 80 * idx}
-            >
+      <div
+        className="md:grid md:grid-cols-2 flex flex-wrap gap-3 m-10"
+        data-aos="fade-down"
+      >
+        {CAMPEONATOS.map((campeonato, idx) => (
+          <div
+            className="p-4 bg-red-800 border border-gray-700"
+            key={idx}
+            data-aos="fade-up"
+            data-aos-delay={200 + 80 * idx}
+          >
+            <div className="pb-2">
+              <p className="text-[32px] text-center bebas_neue-font">
+                {campeonato.title}
+              </p>
+            </div>
+            <div className="flex flex-wrap md:grid md:grid-cols-2 gap-3 m-2">
+              <Image
+                src={campeonato.src}
+                className="self-center h-full"
+                alt={campeonato.title}
+              />
               <div>
-                <p className="text-[32px] pb-6 bebas_neue-font">
-                  {campeonato.title}
-                </p>
-              </div>
-              <div className="grid grid-cols-2 gap-3 m-2">
-                <Image
-                  src={campeonato.src}
-                  className="w-100 h-100"
-                  alt={campeonato.title}
-                />
                 <div>
-                  <div>
-                    <p className="text-[15px] pl-7 inter-font">
-                      {campeonato.text}
-                    </p>
-                  </div>
-                  <div className="pt-5 grid grid-rows-3 bebas_neue-font text-[28px]">
-                    {medalIcons.map((medal, index) => (
-                      <div className="grid grid-cols-2" key={index}>
-                        <Image
-                          src={medal.url}
-                          alt={index + "° Lugar"}
-                          className="pt-2 pl-7 w-20"
-                        />
-                        <p className="items-center flex">{index + 1} lugar</p>
-                      </div>
-                    ))}
-                  </div>
+                  <p className="text-[90%] inter-font">{campeonato.text}</p>
+                </div>
+                <div className="pt-5 grid grid-rows-3 bebas_neue-font text-[28px]">
+                  {medalIcons.map((medal, index) => (
+                    <div className="grid grid-cols-2" key={index}>
+                      <Image
+                        src={medal.url}
+                        alt={index + "° Lugar"}
+                        className="pt-2 pl-7 w-20"
+                      />
+                      <p className="items-center flex">{index + 1} lugar</p>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
-      <div className="ml-20 mr-20">
-        <p className="text-[38px] montserrat_classic-font">
-          Fique ligado em nossas redes sociais para sempre receber atualizações,
-          como datas e inscrições para futuros campeonatos!!
+      <div className="md:mx-10 mx-2 mb-5 text-center">
+        <p className="md:text-[2.5em] text-[1em] montserrat_classic-font flex">
+          Fique ligado em nossas redes sociais para sempre receber as
+          atualizações, como datas e inscrições para futuros campeonatos!!
         </p>
       </div>
-      <div className="pt-20 pb-10 flex justify-around items-center space-x-4 w-full pl-3">
+      <div className="md:grid md:grid-cols-4 flex flex-wrap gap-4 justify-center text-white">
         {CONTATOS.map((contato, idx) => (
-          <Link href={contato.link} className="flex items-center" key={idx}>
+          <Link
+            key={idx}
+            href={contato.link}
+            className="flex items-center justify-center"
+          >
             <Image
               src={contato.src}
               alt={contato.text + "ícone"}
-              className="w-10 h-10 mr-2"
+              className="w-6 h-6 mx-2 md:w-12 md:h-12"
             />
-            <p className="text-[24px] neue_montreal-font">{contato.text}</p>
+            <p>{contato.text}</p>
           </Link>
         ))}
       </div>

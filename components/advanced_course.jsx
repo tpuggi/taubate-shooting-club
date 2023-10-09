@@ -256,20 +256,22 @@ function ACourse() {
     setModalIsOpen(newStates);
   };
   return (
-    <div className="text-white mt-28" data-aos="fade-up">
-      <div className="ml-20 mr-20">
-        <p className="text-[90px] text-center bebas_neue-font">
+    <div className="text-white my-12" data-aos="fade-up">
+      <div className="mx-5">
+        <p className="text-[4em] text-center bebas_neue-font">
           Cursos de Aprimoramento no Tiro
         </p>
       </div>
-      <div className="grid grid-cols-2 gap-3">
+      <div className="md:grid md:grid-cols-2 gap-3 py-10 flex flex-wrap-reverse">
         <div
-          className="h-auto max-h-[20rem] w-auto flex items-center m-12 border border-gray-700 rounded-lg shadow  bg-gradient-to-b from-neutral-700 to-neutral-900"
+          className="h-auto max-h-[20rem] w-auto flex items-center md:m-12 m-6 p-6 border border-gray-700 rounded-lg shadow bg-gradient-to-b from-neutral-700 to-neutral-900"
           data-aos="flip-right"
         >
-          <div className="origin-top-left px-4">
-            <p className="text-[32px] montserrat_classic-font">Conteudo:</p>
-            <p className="text-[24px] inter-font">
+          <div className="origin-top-left md:px-4">
+            <p className="md:text-[2.5em] text-[2em] montserrat_classic-font">
+              Conteudo:
+            </p>
+            <p className="md:text-[1.4em] text-[1em] inter-font">
               Os cursos de aprimoramento no tiro são indicados para os que
               desejam melhorar no tiro esportivo ou de defesa, é uma experiência
               fundamental para habilitar ou capacitar o uso mais assertivo de
@@ -281,8 +283,10 @@ function ACourse() {
           <Image src={advancedCourse[1].url} alt="Curso de Iniciação no Tiro" />
         </div>
       </div>
-      <div className="ml-20 mr-20">
-        <p className="text-[80px] bebas_neue-font">Cursos presentes:</p>
+      <div className="mx-20">
+        <p className="text-[80px] bebas_neue-font text-center">
+          Cursos presentes:
+        </p>
       </div>
       <div
         className="md:grid md:grid-cols-2 flex flex-wrap gap-3 m-10 "
@@ -290,15 +294,17 @@ function ACourse() {
       >
         {COURSES.map((curso, index) => (
           <div
-            className="mr-1 pl-10 pt-10 pb-10 bg-red-800 border border-gray-700"
+            className="p-4 bg-red-800 border border-gray-700"
             key={index}
             data-aos="fade-up"
             data-aos-delay={200 + 80 * index}
           >
             <div className="pb-2">
-              <p className="text-[32px] bebas_neue-font">{curso.title}</p>
+              <p className="text-[32px] text-center bebas_neue-font">
+                {curso.title}
+              </p>
             </div>
-            <div className="grid grid-cols-2 gap-3 m-2">
+            <div className="flex flex-wrap md:grid md:grid-cols-2 gap-3 m-2">
               <Image
                 src={curso.src}
                 className="h-full self-center"
@@ -308,18 +314,20 @@ function ACourse() {
                 <div>
                   <p className="text-[90%] inter-font">{curso.text}</p>
                 </div>
-                <button
-                  className="bg-red-800 shadow border border-black border-opacity-20 text-center text-xl py-2 px-8 font-extrabold hover:shadow-2xl mt-8 mx-auto ml-20"
-                  style={{
-                    fontWeight: "bold",
-                    fontSize: "20px",
-                    border: "2px solid white",
-                    fontFamily: "neue_montreal",
-                  }}
-                  onClick={() => toggleModal(index)}
-                >
-                  SAIBA MAIS
-                </button>
+                <div className="flex justify-center">
+                  <button
+                    className="bg-red-800 shadow border border-black border-opacity-20 text-center text-xl py-2 px-8 font-extrabold hover:shadow-2xl mt-8 mx-10"
+                    style={{
+                      fontWeight: "bold",
+                      fontSize: "20px",
+                      border: "2px solid white",
+                      fontFamily: "neue_montreal",
+                    }}
+                    onClick={() => toggleModal(index)}
+                  >
+                    SAIBA MAIS
+                  </button>
+                </div>
                 <Modal
                   isOpen={modalIsOpen[index]}
                   onRequestClose={() => toggleModal(index)}
@@ -353,22 +361,25 @@ function ACourse() {
           </div>
         ))}
       </div>
-      <div className="mx-20">
-        <p className="text-[38px] montserrat_classic-font">
+      <div className="md:mx-10 mx-2 mb-5 text-center">
+        <p className="md:text-[2.5em] text-[1em] montserrat_classic-font flex">
           Fique ligado em nossas redes sociais para sempre receber as
           atualizações, como datas e inscrições para futuros campeonatos!!
         </p>
       </div>
-
-      <div className="py-10 flex justify-around items-center space-x-4 w-full pl-3">
+      <div className="md:grid md:grid-cols-4 flex flex-wrap gap-4 justify-center text-white">
         {CONTATOS.map((contato, idx) => (
-          <Link key={idx} href={contato.link} className="flex items-center">
+          <Link
+            key={idx}
+            href={contato.link}
+            className="flex items-center justify-center"
+          >
             <Image
               src={contato.src}
               alt={contato.text + "ícone"}
-              className="w-10 h-10 mr-2"
+              className="w-6 h-6 mx-2 md:w-12 md:h-12"
             />
-            <p className="text-[24px] neue_montreal-font">{contato.text}</p>
+            <p>{contato.text}</p>
           </Link>
         ))}
       </div>
