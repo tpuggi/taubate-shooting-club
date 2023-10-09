@@ -135,7 +135,7 @@ function Championchips() {
                   </div>
                   <div className="pt-5 grid grid-rows-3 bebas_neue-font text-[28px]">
                     {medalIcons.map((medal, index) => (
-                      <div className="grid grid-cols-2">
+                      <div className="grid grid-cols-2" key={index}>
                         <Image
                           src={medal.url}
                           alt={index + "° Lugar"}
