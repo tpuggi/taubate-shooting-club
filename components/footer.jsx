@@ -17,7 +17,7 @@ const CURSOS = [
 ];
 
 const INFORMAÇÕES = [
-  { text: "Contato", link: "/contato" },
+  { text: "Contato", link: "/contatos" },
   { text: "Campeonatos", link: "/campeonatos" },
   { text: "Calendário", link: "/calendar" },
   { text: "Ranking", link: "/ranking" },
