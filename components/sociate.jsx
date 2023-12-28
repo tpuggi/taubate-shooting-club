@@ -75,30 +75,25 @@ function sociate() {
             <div className="origin-top-left bg-neutral-900 mt-1 p-10 pb-18 text-white">
               <div className="text-[19px]">
                 <p className="mb-4 inter-font">
-                  • Uso gratuito do estande de tiro com hora marcada. Sócio não
-                  espera para atirar!
+                  • Uso gratuito do estande sem limite!
                 </p>
                 <p className="mb-4 inter-font">
-                  • Acesso gratuito e irrestrito ao acervo do clube – armas e
-                  equipamentos diferenciados.
+                  • Direito de trazer 1 convidado com CR por vez, sem limite.
                 </p>
                 <p className="mb-4 inter-font">
-                  • Descontos exclusivos em competições, cursos, produtos e
-                  munições.
+                  • Desconto de 20% em cursos e munições.
                 </p>
                 <p className="mb-4 inter-font">
-                  • Participação em treinamentos e cursos exclusivos.
+                  • Desconto de 50% no Sistema Laser Shot, inclusive para convidados.
                 </p>
                 <p className="mb-4 inter-font">
-                  • Direito de trazer um convidado (CAC) por mês, gratuitamente.
+                  • Desconto de 50% no valor do estacionamento.
                 </p>
                 <p className="mb-4 inter-font">
-                  • Assessoria especializada para aquisição de armas, obtenção
-                  de porte de arma e registro de Colecionador, Atirador e
-                  Caçador no Exército (CR).
+                  • Acesso ilimitado ao acervo do clube, armas curtas e longas semi-automáticas.
                 </p>
                 <p className="mb-4 inter-font">
-                  • Desconto na Aquisição de Armas.
+                  • Assessoria especializada para aquisição de armas, obtenção de porte de arma e registro de Colecionador, Atirador e Caçador no Exército (CR).
                 </p>
                 <p className="mb-4 inter-font">
                   • Descontos progressivos (Bônus) na renovação e apresentação
@@ -112,15 +107,14 @@ function sociate() {
       <div className="text-white pl-12 pr-12 items-center text-center grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-9 pb-20">
         <div data-aos="fade-down">
           <div className="origin-top-left bg-gradient-to-b from-red-800 to-neutral-900 rounded-tl-[10px] rounded-tr-[10px] pl-3 pt-3 pb-3 text-white">
-            <p className="text-[32px] bebas_neue-font text-center">Plano 01:</p>
+            <p className="text-[32px] bebas_neue-font text-center">COMBO CAC</p>
           </div>
           <div className="origin-top-left mt-1 p-10 pb-18 text-white bg-red-900">
             <div className="text-[19px]">
               <p className="mb-4 inter-font">
-                • Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Delectus consequuntur eos ratione facere eveniet omnis
-                accusantium, aut dolores assumenda nulla incidunt, neque ea quo
-                culpa accusamus debitis repellat repellendus. Facilis?
+                • Registre-se como Atirador Esportivo no Exército Brasileiro (CR de CAC)
+				• Valor: R$2.200,00 (à vista ou em 10 parcelas de R$240,00 no Cartão de Crédito)
+				• Filiação por 12 meses, Teste psicológico, Teste de Capacidade Técnica, Serviço de Despachante e Taxas Inclusas!
               </p>
               <Image src={arma} alt="foto da arma" />
               <button
@@ -139,16 +133,13 @@ function sociate() {
         </div>
         <div data-aos="fade-up">
           <div className="origin-top-left bg-gradient-to-b from-red-800 to-neutral-900 rounded-tl-[10px] rounded-tr-[10px] pl-3 pt-3 pb-3 text-white">
-            <p className="text-[32px] bebas_neue-font text-center">Plano 02:</p>
+            <p className="text-[32px] bebas_neue-font text-center">PLANO MASTER</p>
           </div>
           <div className="origin-top-left bg-red-900 mt-1 p-10 pb-18 text-white">
             <div className="text-[19px]">
               <p className="mb-4 inter-font">
-                • Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Repellendus laboriosam distinctio aspernatur vel quasi, soluta
-                molestiae quae placeat sed nesciunt obcaecati quam, quaerat
-                eveniet qui inventore hic maiores, sapiente neque?
-              </p>
+				• Para policiais, Militares e Atiradores Esportivos R$850,00 (à vista ou em 10 parcelas de R$90,00 no Cartão de Crédito)
+				• R$850,00 (à vista ou em 10 parcelas de R$90,00 no Cartão de Crédito) - Filiação por 12 meses
               <Image src={arma} alt="foto da arma" />
               <button
                 className="bg-red-800 shadow border border-black border-opacity-20 text-center text-3xl pr-16 pl-16 pt-4 pb-4 font-extrabold hover:shadow-2xl mt-8"
@@ -166,15 +157,12 @@ function sociate() {
         </div>
         <div data-aos="fade-down" className="max-h-[100%] overflow-hidden">
           <div className="origin-top-left bg-gradient-to-b from-red-800 to-neutral-900 rounded-tl-[10px] rounded-tr-[10px] pl-3 pt-3 pb-3 text-white">
-            <p className="text-[32px] bebas_neue-font text-center">Plano 03:</p>
+            <p className="text-[32px] bebas_neue-font text-center">DAY USE</p>
           </div>
           <div className="origin-top-left bg-red-900 mt-1 p-10 pb-18 text-white">
             <div className="text-[19px]">
               <p className="mb-4 inter-font">
-                • Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Laudantium tenetur, cumque obcaecati iure molestiae laborum
-                veritatis rem aut perspiciatis, soluta reiciendis optio. Rerum
-                voluptates quos autem soluta commodi eos quidem.
+                • Para CAC visitantes – R$100,00 por treinamento
               </p>
               <Image src={arma} alt="foto da arma" />
               <button
