@@ -140,6 +140,7 @@ function sociate() {
               <p className="mb-4 inter-font">
 				• Para policiais, Militares e Atiradores Esportivos R$850,00 (à vista ou em 10 parcelas de R$90,00 no Cartão de Crédito)
 				• R$850,00 (à vista ou em 10 parcelas de R$90,00 no Cartão de Crédito) - Filiação por 12 meses
+				</p>
               <Image src={arma} alt="foto da arma" />
               <button
                 className="bg-red-800 shadow border border-black border-opacity-20 text-center text-3xl pr-16 pl-16 pt-4 pb-4 font-extrabold hover:shadow-2xl mt-8"
