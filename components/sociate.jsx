@@ -138,8 +138,8 @@ function sociate() {
           <div className="origin-top-left bg-red-900 mt-1 p-10 pb-18 text-white">
             <div className="text-[19px]">
               <p className="mb-4 inter-font">
-				• Para policiais, Militares e Atiradores Esportivos R$850,00 (à vista ou em 10 parcelas de R$90,00 no Cartão de Crédito)
-				• R$850,00 (à vista ou em 10 parcelas de R$90,00 no Cartão de Crédito) - Filiação por 12 meses
+				• Exclusivo para policiais, Militares e Atiradores Esportivos
+				• Valor: R$850,00 (à vista ou em 10 parcelas de R$90,00 no Cartão de Crédito) - Filiação por 12 meses
 				</p>
               <Image src={arma} alt="foto da arma" />
               <button
@@ -163,7 +163,8 @@ function sociate() {
           <div className="origin-top-left bg-red-900 mt-1 p-10 pb-18 text-white">
             <div className="text-[19px]">
               <p className="mb-4 inter-font">
-                • Para CAC visitantes – R$100,00 por treinamento
+                • Para CACs visitantes 
+				• Valor: R$100,00 por treinamento
               </p>
               <Image src={arma} alt="foto da arma" />
               <button
