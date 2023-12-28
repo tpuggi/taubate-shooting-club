@@ -112,15 +112,12 @@ function sociate() {
       <div className="text-white pl-12 pr-12 items-center text-center grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-9 pb-20">
         <div data-aos="fade-down">
           <div className="origin-top-left bg-gradient-to-b from-red-800 to-neutral-900 rounded-tl-[10px] rounded-tr-[10px] pl-3 pt-3 pb-3 text-white">
-            <p className="text-[32px] bebas_neue-font text-center">Plano 01:</p>
+            <p className="text-[32px] bebas_neue-font text-center">COMBO CAC:</p>
           </div>
           <div className="origin-top-left mt-1 p-10 pb-18 text-white bg-red-900">
             <div className="text-[19px]">
               <p className="mb-4 inter-font">
-                • Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Delectus consequuntur eos ratione facere eveniet omnis
-                accusantium, aut dolores assumenda nulla incidunt, neque ea quo
-                culpa accusamus debitis repellat repellendus. Facilis?
+                • Registre-se como Atirador Esportivo no Exército Brasileiro (CR de CAC)
               </p>
               <Image src={arma} alt="foto da arma" />
               <button
