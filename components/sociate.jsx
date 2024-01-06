@@ -1,6 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import arma from "../public/images/armaPrin.png";
+import dayuse from "../public/images/dayuse.jpg";
+import planmaster from "../public/images/master.jpg";
+import cacjpg from "../public/images/cac.jpg";
 import { socialIcons } from "../context/context";
 
 const CONTATOS = [
@@ -116,7 +119,7 @@ function sociate() {
 				• Valor: R$2.200,00 (à vista ou em 10 parcelas de R$240,00 no Cartão de Crédito)
 				• Filiação por 12 meses, Teste psicológico, Teste de Capacidade Técnica, Serviço de Despachante e Taxas Inclusas!
               </p>
-              <Image src={arma} alt="foto da arma" />
+              <Image src={cacjpg} alt="foto do cac" />
               <button
                 className="bg-red-800 shadow border border-black border-opacity-20 text-center text-3xl pr-16 pl-16 pt-4 pb-4 font-extrabold hover:shadow-2xl mt-8"
                 style={{
@@ -141,7 +144,7 @@ function sociate() {
 				• Exclusivo para policiais, Militares e Atiradores Esportivos
 				• Valor: R$850,00 (à vista ou em 10 parcelas de R$90,00 no Cartão de Crédito) - Filiação por 12 meses
 				</p>
-              <Image src={arma} alt="foto da arma" />
+              <Image src={planmaster} alt="foto do policial" />
               <button
                 className="bg-red-800 shadow border border-black border-opacity-20 text-center text-3xl pr-16 pl-16 pt-4 pb-4 font-extrabold hover:shadow-2xl mt-8"
                 style={{
@@ -166,7 +169,7 @@ function sociate() {
                 • Para CACs visitantes 
 				• Valor: R$100,00 por treinamento
               </p>
-              <Image src={arma} alt="foto da arma" />
+              <Image src={dayuse} alt="foto do marcelo" />
               <button
                 className="bg-red-800 shadow border border-black border-opacity-20 text-center text-3xl pr-16 pl-16 pt-4 pb-4 font-extrabold hover:shadow-2xl mt-8"
                 style={{
