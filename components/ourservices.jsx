@@ -25,7 +25,7 @@ const SERVICES = [
   {
     title: "Competições",
     text: "Realizamos regularmente competições de tiro em diversas modalidades. Treine conosco, participe e seja um atleta no ranking do IDSC, Tiro Tático Dinâmico (TTD), Tiro Rápido de Precisão, Shot Precision e IPSC. Com retorno dos níveis de atirador esportivo, o TSC sedia diversas competições de ambito nacional e internacional.",
-    image: servicesImages[4].url,
+    image: servicesImages[6].url,
   },
 ];
 
