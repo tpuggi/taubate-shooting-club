@@ -1,5 +1,5 @@
 import clubePhoto from "../public/images/clube.jpg";
-import mission from "../public/images/Atirador Esportivo.jpg";
+import mission from "../public/images/missao.jpg";
 import Image from "next/image";
 
 const OurHistory = () => {
