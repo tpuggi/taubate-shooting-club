@@ -5,7 +5,7 @@ const SERVICES = [
   {
     title: "Manutenção de Armamentos",
     text: "O TSC possui armeiro credenciado pela polícia federal capacitado para realizar manutenção preventiva ou corretiva do seu equipamento. Também realizamos customização do seu armamento. Pintura e gravação à Laser são nossas especialidades, pelo convênio com a Cammo Arts Custom.",
-    image: servicesImages[0].url,
+    image: servicesImages[5].url,
   },
   {
     title: "Despachantes Especializados",
