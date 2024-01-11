@@ -94,12 +94,12 @@ function Championchips() {
         >
           <div className="origin-top-left md:px-4">
             <p className="md:text-[2.5em] text-[2em]  montserrat_classic-font">
-              Conteudo:
+              Provas de Níveis Local, Regional e Nacional
             </p>
             <p className="md:text-[1.4em] text-[1em] inter-font">
-              Todos os temas da cartilha de armamento e tiro da PF, elaborada
-              pelo Serviço de Armamento e Tiro - SAT da Academia Nacional de
-              Polícia.
+              Somos filiados às principais entidades do tiro, como CBTP, CBTD, FPTP, LINADE e LIBRATE, entre outras, 
+			  e realizamos competições regulares em todos os níveis. Aqui você encontrará uma modalidade esportiva que se adapte às suas habilidades e 
+			  interesses, para manter seu registro de atirador esportivo e seu acervo. Venha competir em um ambiente moderno e com estrutura de padrão internacional!
             </p>
           </div>
         </div>
