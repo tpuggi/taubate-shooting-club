@@ -94,7 +94,7 @@ function Championchips() {
         >
           <div className="origin-top-left md:px-4">
             <p className="md:text-[2.5em] text-[2em]  montserrat_classic-font">
-              Provas de Níveis Local, Regional e Nacional
+              Provas Locais, Regionais e Nacionais
             </p>
             <p className="md:text-[1.4em] text-[1em] inter-font">
               Somos filiados às principais entidades do tiro, como CBTP, CBTD, FPTP, LINADE e LIBRATE, entre outras, 
