@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import Papa from "papaparse";
+import PDFGenerator from "@/components/pdf_generator";
+import { Worker, Viewer } from '@react-pdf-viewer/core';
 
 const RANKINGHEAD = [
   { title: "Colocação" },
@@ -11,6 +13,7 @@ const RANKINGHEAD = [
   { title: "Pista 1" },
   { title: "Pista 2" },
   { title: "Total" },
+  { title: "Certificado" },
 ];
 
 export default function Ranking() {
@@ -126,6 +129,12 @@ export default function Ranking() {
                   <td className="px-6 py-4">{item["Pista 1"]}</td>
                   <td className="px-6 py-4">{item["Pista 2"]}</td>
                   <td className="px-6 py-4">{item["Total"]}</td>
+                  <td className="px-6 py-4">
+                  <div>
+                    <PDFGenerator/>
+                  </div>
+                  </td>
+
                 </tr>
               ))}
             </tbody>
