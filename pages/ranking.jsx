@@ -123,7 +123,7 @@ export default function Ranking() {
                   >
                     {item["Colocação"]}°
                   </th>
-                  <td className="px-6 py-4">{item["Divisão"]}</td>
+                  <td className="px-6 py-4">{item["Divisao"]}</td>
                   <td className="px-6 py-4">{item["Categoria"]}</td>
                   <td className="px-6 py-4">{item["Atleta"]}</td>
                   <td className="px-6 py-4">{item["Pista 1"]}</td>
@@ -131,7 +131,7 @@ export default function Ranking() {
                   <td className="px-6 py-4">{item["Total"]}</td>
                   <td className="px-6 py-4">
                   <div>
-                    <PDFGenerator/>
+                    <PDFGenerator item={item} />
                   </div>
                   </td>
 
